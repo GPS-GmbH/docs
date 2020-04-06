@@ -3,10 +3,6 @@ label: Page
 hide_body: false
 fields: []
 pages:
-- developer/create-app.md
 - developer/index.md
 - developer/mqtt-api-documentation.md
-- developer/publish-app.md
-- user/asset-management.md
-- user/certificates.md
 - user/index.md
