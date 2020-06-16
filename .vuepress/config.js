@@ -1,7 +1,7 @@
 // Theme API.
 const tailwindcss = require('tailwindcss')
 const glob = require('glob')
-// const getSidebar = require('./sidebar')
+    // const getSidebar = require('./sidebar')
 
 const title = 'Sicon.OS Documentation'
 const description = 'Documentation for users and developers'
@@ -10,35 +10,38 @@ const color = '#1c9a9a'
 
 const getChildren = (parentPath) => {
     return glob
-      .sync(parentPath + '/*.md')
-      .map(path => {
-        // remove "parentPath" and ".md"
-        // remove README
-        if (path.endsWith('README')) {
-          path = path.slice(0, -6)
-        }
-        return `/${path}`.replace('.md', '').replace('index', '')
-      })
-      .sort()
-  }
-const locales = {
-    '/': {
-        lang: 'English',
-        title: 'Sicon.OS Documentation',
-        description: 'Vue-powered Static Site Generator',
-    },
-    '/de/': {
-        lang: 'Deutsch',
-        title: 'Sicon.OS Dokumentation',
-        description: 'Dokumentation zu Sicon APPs, PLUGs und OS',
-    },
+        .sync(parentPath + '/*.md')
+        .map(path => {
+            // remove "parentPath" and ".md"
+            // remove README
+            if (path.endsWith('README')) {
+                path = path.slice(0, -6)
+            }
+            return `/${path}`.replace('.md', '').replace('index', '')
+        })
+        .sort()
 }
-// const sidebar = require('./sidebar')(path.relative(__dirname, '../'), locales)
-// console.log('sidebar', sidebar)
+const locales = {
+        '/': {
+            lang: 'English',
+            title: 'Sicon.OS Documentation',
+            description: 'Vue-powered Static Site Generator',
+        },
+        '/de/': {
+            lang: 'Deutsch',
+            title: 'Sicon.OS Dokumentation',
+            description: 'Dokumentation zu Sicon APPs, PLUGs und OS',
+        },
+    }
+    // const sidebar = require('./sidebar')(path.relative(__dirname, '../'), locales)
+    // console.log('sidebar', sidebar)
 
-const config = async () => ({
+const config = async() => ({
     title,
     head: [
+        ['link', { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.13.0/css/brands.css' }],
+        ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.13.0/css/fontawesome.css' }],
         ['link', { rel: 'icon', href: `/assets/favicon.ico` }],
         ['meta', { name: 'theme-color', content: color }],
         ['meta', { prefix: ogprefix, property: 'og:title', content: title }],
@@ -73,8 +76,7 @@ const config = async () => ({
             { text: 'Developer Guide', link: '/developer/' },
         ],
         sidebar: {
-            '/developer/': [
-                {
+            '/developer/': [{
                     collapsable: false,
                     title: '🚀 Developer Guide',
                     children: getChildren('developer'),
@@ -85,8 +87,7 @@ const config = async () => ({
                     children: getChildren('developer/apps'),
                 },
             ],
-            '/user/': [
-                {
+            '/user/': [{
                     collapsable: false,
                     title: 'User Guide',
                     children: getChildren('user'),

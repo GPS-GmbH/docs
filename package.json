@@ -21,6 +21,7 @@
   "homepage": "https://github.com/GPS-GmbH/docs#readme",
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
+    "css-loader": "^3.6.0",
     "vuepress": "^1.2.0"
   },
   "dependencies": {
