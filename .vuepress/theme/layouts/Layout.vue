@@ -22,7 +22,7 @@
         <slot name="page-bottom" slot="bottom" />
       </Page>
     </div>
-    <footer
+    <!-- <footer
       class="site-footer"
       style="background-image:url(https://test.sicon.eco/wp-content/uploads/2020/06/footer-bg.png); background-size: cover;"
     >
@@ -155,7 +155,7 @@
           </div>
         </div>
       </div>
-    </footer>
+    </footer> -->
   </div>
 </template>
 
