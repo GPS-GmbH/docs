@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Sicon.OS Documentation
-heroBackground: "/home.jpg"
+heroBackground: "/geometric-crop.jpg"
 tagline: Bring your own device, just plug
 actionText: Get Started →
 actionLink: "/user/"
