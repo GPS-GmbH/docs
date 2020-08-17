@@ -8,3 +8,4 @@ pages:
 - developer/mqtt-api-documentation.md
 - user/get-started.md
 - user/index.md
+- user/settings/import-certificate.md
