@@ -3,4 +3,10 @@
 ---
 # Import Certificates
 
-Coming Soon
+## Windows
+
+This section is for windows operating system
+
+## Mac
+
+This section is for windows operating system
