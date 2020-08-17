@@ -33,17 +33,17 @@ ToDo - This section is for exception in browser
 * If we ever need further certificates, i.e. for the OPC UA server, new exceptions must be granted.
 * As a result of this test: Edge needs the confirmation of the exception for every session.
 
-  #### Exception in FireFox
+#### Exception in FireFox
 
-  Images will be added here.
+Images will be added here.
 
-  #### Exception in Chrome
+#### Exception in Chrome
 
-  Images will be added here.
+Images will be added here.
 
-  #### Exception in Edge
+#### Exception in Edge
 
-  Images will be added here.
+Images will be added here.
 
 ### Import System Wide
 
