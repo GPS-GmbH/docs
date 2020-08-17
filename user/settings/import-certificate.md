@@ -21,12 +21,12 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 
 ToDo - This section is for exception in browser
 
-Advantage:
+**Advantage:**
 
 * Quickly done.
 * The customer does not need to get our root certificate.
 
-Disadvantages:
+**Disadvantages:**
 
 * The system/browser is trusting the certificate on an exception base only. (Icon does not turn green.)
 * It must be done for all browsers separately.
@@ -49,20 +49,20 @@ Disadvantages:
 
 ToDo - This section is for importing the certificate system wide
 
-Advantages:
+**Advantages:**
 
 * When the browsers accept the chosen key and signature algorithms and lengths, one import serves all browsers that use the system's certificate manager (currently edge and chrome)
 * GPS can issue further certificates without the customer's need to import anything again.
-* No repeated accepting of certificates on edge browser
+* No repeated accepting of certificates on edge browser.
 
-Disadvantages:
+**Disadvantages:**
 
-* Lots of steps
-* Customer must get the root certificate on a separate way
+* Lots of steps.
+* Customer must get the root certificate on a separate way.
 
 #### Via Chrome
 
-This section is for importing the certificate system wide via chrome
+This section is for importing the certificate system wide via chrome.
 
 #### Via Windows file browser
 
