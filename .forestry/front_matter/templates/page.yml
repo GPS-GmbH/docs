@@ -6,7 +6,6 @@ pages:
 - assets.md
 - developer/index.md
 - developer/mqtt-api-documentation.md
-- user/get-started-1.md
 - user/get-started.md
 - user/index.md
 - user/settings/import-certificate.md
