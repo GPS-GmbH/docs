@@ -19,11 +19,46 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 
 ### Exception in Browser
 
-This section is for exception in browser
+ToDo - This section is for exception in browser
+
+Advantage:
+
+* Quickly done
+* The customer does not need to get our root certificate
+
+Disadvantages:
+
+* The system/browser is trusting the certificate on an exception base only. (Icon does not turn green.)
+* It must be done for all browsers separately.
+* If we ever need further certificates, i.e. for the OPC UA server, new exceptions must be granted.
+* As a result of this test: Edge needs the confirmation of the exception for every session.
+
+  #### Exception in FireFox
+
+  Images will be added here.
+
+  #### Exception in Chrome
+
+  Images will be added here.
+
+  #### Exception in Edge
+
+  Images will be added here.
 
 ### Import System Wide
 
-This section is for importing the certificate system wide
+ToDo - This section is for importing the certificate system wide
+
+Advantages:
+
+* When the browsers accept the chosen key and signature algorithms and lengths, one import serves all browsers that use the system's certificate manager (currently edge and chrome)
+* GPS can issue further certificates without the customer's need to import anything again.
+* No repeated accepting of certificates on edge browser
+
+Disadvantages:
+
+* Lots of steps
+* Customer must get the root certificate on a separate way
 
 #### Via Chrome
 
