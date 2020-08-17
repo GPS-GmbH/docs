@@ -23,8 +23,8 @@ ToDo - This section is for exception in browser
 
 Advantage:
 
-* Quickly done
-* The customer does not need to get our root certificate
+* Quickly done.
+* The customer does not need to get our root certificate.
 
 Disadvantages:
 
