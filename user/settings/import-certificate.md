@@ -35,7 +35,7 @@ ToDo - This section is for exception in browser
 
 #### Exception in FireFox
 
-Images will be added here.
+Please follow the below steps to add an exception in Firefox browser.
 
 ##### Step 1 : 
 
@@ -55,6 +55,12 @@ Click on "Add Exception..."
 Click on "Confirm Security Exception"
 
 ![](/image2018-12-14_13-6-25.png)
+
+##### Result
+
+Click on "Confirm Security Exception"
+
+[image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2](https://appserver.gps-stuttgart.de/wiki/download/attachments/19726672/image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2 "image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2")
 
 #### Exception in Chrome
 
