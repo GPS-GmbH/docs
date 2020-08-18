@@ -37,6 +37,19 @@ ToDo - This section is for exception in browser
 
 Images will be added here.
 
+##### Step 1 : 
+
+* In Firefox browser open your SICON.OS website.
+* On page load, Click on the option "Advanced".
+
+  ![](/image2018-12-14_13-32-4.png)
+
+##### Step 2 : 
+
+Click on "Add Exception..."
+
+![](/image2018-12-14_13-5-32.png)
+
 #### Exception in Chrome
 
 Images will be added here.
