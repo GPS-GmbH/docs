@@ -1,3 +1,6 @@
+---
+
+---
 # Creating an App
 
 All apps are docker images stored on your registry of choice.
@@ -10,14 +13,13 @@ When building for the Sicon platform, depending on the capabilities you want to 
 * Service
 * Server
 * Client
+* Adapter
 
 ### Service
 
 This container provides services like OPCUA, MQTT or similar. In the case, you want to expose the data for use in another protocol, or provide the data to cloud providers.
 
 Containers can open ports, as long as they are not used by other services already.
-
-Configuration
 
 ### Server
 
@@ -42,7 +44,6 @@ This can be used embed your dashboard
 * `?frameless` - hide the layout
 * `?path` - path to webserver in iframe, for e.g. initial load
 
-
 ### Client - Work in Progress
 
 A client-app is a tightly integrated front-end application that has access to the in-built components and API functions. There is no need to write extra wrappers.
@@ -52,6 +53,10 @@ E.g. `https://siconstratos.local/apps/gps/view`
 ::: tip Work in Progress
 This integration mode is not available yet. We will update the documentation, once this is ready for developers.
 :::
+
+### Adapter
+
+An adapter is like a service, so it can consume, process and publish device data. Additionally, an adapter can register different main devices to the main device catalog. 
 
 ## Build and Deployment
 
@@ -85,11 +90,13 @@ When your app is created and registered through the sicon platform, these enviro
     ]
 }
 ```
+
 You can [change these settings](./publish-app#app-json-schema) to be extended or replaced if needed, when editing the app in the app-store.
 Within the sicon-network, you have access to a bridged network wherein the APIs are available from.
 
 While developing locally on e.g. a laptop, it is recommended to always use these environment variables for connecting to Sicon OS APIs within the same network.
 **Example with a docker-compose file:**
+
 ``` yaml
 version: '3'
 
