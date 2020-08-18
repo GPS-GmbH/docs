@@ -1,3 +1,6 @@
+---
+
+---
 # Developer Guide
 
 Overview of the Sicon.OS Platform
@@ -19,5 +22,5 @@ MQTT serves as event stream to react on sensor data change.
 
 ![](/app-workflow.jpg)
 
-1. [Develop the application](./create-app.md)
-2. [Publish the application](./publish-app.md)
+1. [Develop the application](./apps/create-app.md)
+2. [Publish the application](./apps/publish-app.md)
