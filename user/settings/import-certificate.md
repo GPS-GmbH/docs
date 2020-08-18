@@ -58,7 +58,7 @@ Click on "**Confirm Security Exception**"
 
 ##### Result
 
-![](/result.png)
+![](/firefox_result.png)
 
 #### Exception in Chrome
 
