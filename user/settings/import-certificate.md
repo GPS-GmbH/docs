@@ -37,20 +37,20 @@ ToDo - This section is for exception in browser
 
 Please follow the below steps to add an exception in Firefox browser.
 
-##### Step 1 : 
+##### Step 1 :
 
 * In Firefox browser open your SICON.OS website.
 * On page load, Click on the option "**Advanced**".
 
   ![](/image2018-12-14_13-32-4.png)
 
-##### Step 2 : 
+##### Step 2 :
 
 Click on "**Add Exception...**"
 
 ![](/image2018-12-14_13-5-32.png)
 
-##### Step 3 : 
+##### Step 3 :
 
 Click on "**Confirm Security Exception**"
 
@@ -64,20 +64,22 @@ Click on "**Confirm Security Exception**"
 
 Please follow the below steps to add an exception in Chrome browser.
 
-##### Step 1 : 
+##### Step 1 :
 
 * In Chrome browser open your SICON.OS website.
 * On page load, Click on the option "**Advanced**".
 
 ![](/advance.png)
 
-##### Step 2 : 
+##### Step 2 :
 
 Click on "**Proceed to hostname.local (Unsafe)**"
 
 ![](/proceed-with-unsafe.png)
 
 ##### Result
+
+![](/chrome-result.png)
 
 #### Exception in Edge
 
