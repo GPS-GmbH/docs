@@ -89,9 +89,14 @@ const config = async() => ({
             ],
             '/user/': [{
                     collapsable: false,
-                    title: 'User Guide',
-                    children: getChildren('user'),
+                    title: '➡️ Get Started',
+                    children: getChildren('user/getStarted'),
                 },
+                // {
+                //     collapsable: false,
+                //     title: 'User Guide',
+                //     children: getChildren('user'),
+                // },
                 {
                     collapsable: false,
                     title: '⚙️️ Settings',
