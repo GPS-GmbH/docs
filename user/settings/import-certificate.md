@@ -58,9 +58,7 @@ Click on "Confirm Security Exception"
 
 ##### Result
 
-Click on "Confirm Security Exception"
-
-[image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2](https://appserver.gps-stuttgart.de/wiki/download/attachments/19726672/image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2 "image2018-12-14_13-7-41.png?version=1&modificationDate=1544789259313&api=v2")
+![](/result.png)
 
 #### Exception in Chrome
 
