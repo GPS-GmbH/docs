@@ -52,7 +52,7 @@ Click on "Add Exception..."
 
 #### Exception in Chrome
 
-Images will be added here.
+ToDo Images will be added here.
 
 #### Exception in Edge
 
