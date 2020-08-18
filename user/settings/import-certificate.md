@@ -50,6 +50,12 @@ Click on "Add Exception..."
 
 ![](/image2018-12-14_13-5-32.png)
 
+##### Step 3 : 
+
+Click on "Confirm Security Exception"
+
+![](/image2018-12-14_13-6-25.png)
+
 #### Exception in Chrome
 
 ToDo Images will be added here.
