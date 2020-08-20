@@ -139,7 +139,9 @@ Open the system's certificate manager
 
 ##### Step 4 :
 
-Select the correct store (aka category) for the certificate: Trusted Root Authority Certificate (From here TODO)
+* Select the correct store (aka category) for the certificate: Trusted Root Authority Certificate
+* Now Click on "**Import**" 
+* (From here TODO)
 
 #### Via Windows file browser
 
