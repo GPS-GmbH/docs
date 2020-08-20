@@ -83,11 +83,28 @@ Click on "**Proceed to hostname.local (Unsafe)**"
 
 #### Exception in Edge
 
-Images will be added here.
+Please follow the below steps to add an exception in Edge browser.
+
+##### Step 1 :
+
+* In Edge browser open your SICON.OS website.
+* On page load, Click on "**Details**"
+
+  ![](/details.png)
+
+##### Step 2 :
+
+* Click on "**Go on to the webpage**".
+
+  ![](/gotowebpage.png)
+
+##### Result
+
+* ![](/certificateerror.png)
 
 ### Import System Wide
 
-ToDo - This section is for importing the certificate system wide
+There are two methods to import the certificate system wide, import via Chrome browser or via windows file browser.
 
 **Advantages:**
 
@@ -102,7 +119,27 @@ ToDo - This section is for importing the certificate system wide
 
 #### Via Chrome
 
-This section is for importing the certificate system wide via chrome.
+##### Step 1 :
+
+Open Settings in Chrome
+
+![](/settingsinchrome.png)
+
+##### Step 2 :
+
+Open Advanced Settings
+
+![](/chromeadvancedsettings.png)
+
+##### Step 3 :
+
+Open the system's certificate manager
+
+![](/chromecertificatemanage.png)
+
+##### Step 4 :
+
+Select the correct store (aka category) for the certificate: Trusted Root Authority Certificate (From here TODO)
 
 #### Via Windows file browser
 
