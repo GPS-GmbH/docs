@@ -293,12 +293,6 @@ The certificate will get imported successfully. (The Icon will turn green.)
 
 ![](/firefoxresult.png)
 
-This section is for importing the certificate in a browser
-
-#### 
-
-This section is for importing the certificate in Firefox browser
-
 ## Mac
 
-This section is for Mac operating system
+This section is for Mac operating system (To Do...)
