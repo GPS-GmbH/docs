@@ -56,6 +56,8 @@ Click on "**Confirm Security Exception**"
 
 ##### Result
 
+The Icon below shows that the certificate is imported.
+
 ![](/firefox_result.png)
 
 #### Exception in Chrome
