@@ -186,7 +186,12 @@ Click to open the system's certificate manager
 
 #### Via Windows file browser
 
-This section is for importing the certificate system wide via windows file browser
+##### Step 1 :
+
+* Select the **.crt file** from your system.
+
+  ![](/wfb-open-cert-file.png)
+* A Security Warning message will be appeared. Click on "**Open**"   
 
 ### Import in Browser
 
