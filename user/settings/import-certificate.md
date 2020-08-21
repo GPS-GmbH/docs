@@ -242,9 +242,9 @@ After selecting the .crt file, click on "**Next**".
 
 ##### Step 7 :
 
-* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
 
-  ![](/chromecertificatestore.png)
+* ![](/chromecertificatestore.png)
 
 ##### Step 8 :
 
