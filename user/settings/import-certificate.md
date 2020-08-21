@@ -179,7 +179,7 @@ Click to open the "**Manage certificate**"
 
 ##### Step 8 :
 
-* Click on "**Finish**" to complete the installation process for certificate. 
+* Click on "**Finish**" to complete the installation process of certificate Import. 
 
   ![](/chromefinish.png)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
@@ -210,7 +210,7 @@ To start install procedure, click on "**Install Certificate**
 * Now the Certificate Import Wizard will get open.
 
 
-* Select the store Location, by click on "Current User" 
+* Select the Store Location, by click on "Current User" 
 
   ![](/wfbstore-location.png)
 
@@ -232,7 +232,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 Select the correct store (aka category) for the certificate: "**Trusted Root Authority Certificate"** and the click on "**OK**"
 
-* ![](/wfbcertificatestore.png)
+![](/wfbcertificatestore.png)
 
 ##### Step 6 :
 
