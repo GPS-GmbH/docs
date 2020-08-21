@@ -19,8 +19,6 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 
 ### Exception in Browser
 
-ToDo - This section is for exception in browser
-
 **Advantage:**
 
 * Quickly done.
