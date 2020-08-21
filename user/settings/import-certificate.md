@@ -117,17 +117,17 @@ There are two methods to import the certificate system wide, import via Chrome b
 * Lots of steps.
 * Customer must get the root certificate on a separate way.
 
-#### Via Chrome
+#### Via Chrome browser
 
 ##### Step 1 :
 
-Open Settings in Chrome
+Open **Settings** in Chrome
 
 ![](/settingsinchrome.png)
 
 ##### Step 2 :
 
-Open Advanced Settings
+Click to open Advanced Settings
 
 ![](/chromeadvancedsettings.png)
 
@@ -140,7 +140,7 @@ Open the system's certificate manager
 ##### Step 4 :
 
 * Select the correct store (aka category) for the certificate: Trusted Root Authority Certificate
-* Now Click on "**Import**" 
+* Now Click on "**Import**"
 * (From here TODO)
 
 #### Via Windows file browser
