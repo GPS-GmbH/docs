@@ -267,6 +267,30 @@ Click on "**Options**" in Firefox browser menu.
 
 ##### Step 2 :
 
+* To find the browser's Certificate Manager, click on "**Privacy & Security**" option and select the given options. 
+
+  ![](/firefoxprivacy-security.png)
+* After selecting the appropriate options, click on "**View Certificates.**."
+
+  ![](/firefoxviewcertificates.png)
+
+##### Step 3 :
+
+To Import the certificate file:
+
+* After click on the "View Certificate", the Certificate Manager page will be opened.
+* Select the "**Authorities**" panel.
+* Then click on "**Import**" option given below.
+
+  ![](/firefoxcertificate-manager.png)
+* Now select the .crt file you want to import from your system and click on "**Open**"
+
+##### Step 4 :
+
+Set the purposes for the certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
+
+![](/firefoxdownloadingcertificate.png)
+
 This section is for importing the certificate in a browser
 
 #### 
