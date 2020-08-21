@@ -232,15 +232,26 @@ Click to open the system's certificate manager
 
 ##### Step 6 :
 
-* Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
-* Select the Certificate file from your system and click on "**Open**".
-* After selecting the Certificate file, click on "**Next**".
+* After selecting the .crt file, click on "**Next**".
 
   ![](/wfbfile-to-import-next.png)
 
 ##### Step 7 :
 
 * Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+
+  ![](/chromecertificatestore.png)
+
+##### Step 8 :
+
+* Click on "**Finish**" to complete the installation process for certificate. 
+
+  ![](/chromefinish.png)
+* Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
+
+  ![](/chromesecuritywarning.png)
+
+  ![](/installationcomplete.png)
 
 ### Import in Browser
 
