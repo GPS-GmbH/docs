@@ -104,7 +104,7 @@ Please follow the below steps to add an exception in Edge browser.
 
 The Icon below shows that the certificate is not imported. Repeat the procedure from step 1 again untill the Icon get turn green. 
 
-* ![](/certificateerror.png)
+![](/certificateerror.png)
 
 ### Import System Wide
 
