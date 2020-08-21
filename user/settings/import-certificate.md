@@ -121,27 +121,35 @@ There are two methods to import the certificate system wide, import via Chrome b
 
 ##### Step 1 :
 
-Open **Settings** in Chrome
+Open "**Settings"** in Chrome
 
 ![](/settingsinchrome.png)
 
 ##### Step 2 :
 
-Click to open Advanced Settings
+Click to open "**Advanced Settings"**
 
 ![](/chromeadvancedsettings.png)
 
 ##### Step 3 :
 
-Open the system's certificate manager
+Click to open the system's certificate manager
 
 ![](/chromecertificatemanage.png)
 
 ##### Step 4 :
 
-* Select the correct store (aka category) for the certificate: Trusted Root Authority Certificate
-* Now Click on "**Import**"
-* (From here TODO)
+* Click on the "**Trusted Root Authority Certificate"**.
+* Select the correct store (aka category) for the certificate.
+
+  ![](/trustedrootauthoritycertificate.png)
+
+##### Step 5 :
+
+* Now "**select the Certificate file**" from the store and click on "**Import**"
+
+  ![](/cert-file.png)
+* Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
 
 #### Via Windows file browser
 
