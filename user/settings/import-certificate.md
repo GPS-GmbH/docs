@@ -291,6 +291,12 @@ Set the purposes for the certificate by selecting the option "**Trust this CA to
 
 ![](/firefoxdownloadingcertificate.png)
 
+##### Result :
+
+The certificate will get imported successfully.
+
+![](/firefoxresult.png)
+
 This section is for importing the certificate in a browser
 
 #### 
