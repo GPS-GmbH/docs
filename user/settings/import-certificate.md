@@ -79,6 +79,8 @@ Click on "**Proceed to hostname.local (Unsafe)**"
 
 ##### Result
 
+The Icon below shows that it is unclear if the certificate is imported.
+
 ![](/chrome-result.png)
 
 #### Exception in Edge
@@ -99,6 +101,8 @@ Please follow the below steps to add an exception in Edge browser.
   ![](/gotowebpage.png)
 
 ##### Result
+
+The Icon below shows that the certificate is not imported. Repeat the procedure from step 1 again untill the Icon get turn green. 
 
 * ![](/certificateerror.png)
 
