@@ -251,7 +251,7 @@ After selecting the .crt file, click on "**Next**".
 
   ![](/installationcomplete.png)
 
-### Import in Browser
+### Import in Browser (Firefox only)
 
 #### Firefox
 
