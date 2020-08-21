@@ -175,7 +175,14 @@ Click to open the system's certificate manager
 
 ##### Step 8 :
 
-* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+* Click on "**Finish**" to complete the installation process for certificate. 
+
+  ![](/chromefinish.png)
+* Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
+
+  ![](/chromesecuritywarning.png)
+
+  ![](/installationcomplete.png)
 
 #### Via Windows file browser
 
