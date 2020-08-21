@@ -289,7 +289,7 @@ Set the purposes for the certificate by selecting the option "**Trust this CA to
 
 ##### Result :
 
-The certificate will get imported successfully.
+The certificate will get imported successfully. (The Icon will turn green.)
 
 ![](/firefoxresult.png)
 
