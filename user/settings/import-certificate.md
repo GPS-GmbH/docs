@@ -253,8 +253,6 @@ After selecting the .crt file, click on "**Next**".
 
 ### Import in Browser (Firefox only)
 
-#### Firefox
-
 To Import an additional root-certificate to the Firefox browser, please follow the below steps: 
 
 ##### Step 1 :
