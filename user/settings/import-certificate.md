@@ -137,7 +137,7 @@ Click to open "**Advanced Settings"**
 
 ##### Step 3 :
 
-Click to open the system's certificate manager
+Click to open the "**Manage certificate**"
 
 ![](/chromecertificatemanage.png)
 
@@ -173,7 +173,7 @@ Click to open the system's certificate manager
 
 ##### Step 7 :
 
-* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+* Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
   ![](/chromecertificatestore.png)
 
