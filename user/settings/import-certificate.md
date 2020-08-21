@@ -44,7 +44,7 @@ Please follow the below steps to add an exception in Firefox browser.
 
 ##### Step 2 :
 
-Click on "**Add Exception...**"
+Now click on "**Add Exception...**"
 
 ![](/image2018-12-14_13-5-32.png)
 
