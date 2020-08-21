@@ -149,7 +149,23 @@ Click to open the system's certificate manager
 * Now "**select the Certificate file**" from the store and click on "**Import**"
 
   ![](/cert-file.png)
+
+##### Step 6 :
+
 * Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
+
+  ![](/certificateimportwizard.png)
+
+
+* Click on "**Browse**" to specify the file you want to import.
+
+  ![](/chromebrowse.png)  
+* Select the Certificate file from your system and click on "**Open**".
+
+  ![](/chromerootcertfile.png)
+* After selecting the Certificate file, click on "**Next**".
+
+  ![](/chromenext.png)
 
 #### Via Windows file browser
 
