@@ -167,6 +167,16 @@ Click to open the system's certificate manager
 
   ![](/chromenext.png)
 
+##### Step 7 :
+
+* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+
+  ![](/chromecertificatestore.png)
+
+##### Step 8 :
+
+* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
+
 #### Via Windows file browser
 
 This section is for importing the certificate system wide via windows file browser
