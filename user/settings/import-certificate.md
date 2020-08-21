@@ -163,7 +163,7 @@ Click to open the system's certificate manager
 * Select the Certificate file from your system and click on "**Open**".
 
   ![](/chromerootcertfile.png)
-* After selecting the Certificate file, click on "**Next**".
+* After selecting the .crt file, click on "**Next**".
 
   ![](/chromenext.png)
 
@@ -191,7 +191,56 @@ Click to open the system's certificate manager
 * Select the **.crt file** from your system.
 
   ![](/wfb-open-cert-file.png)
-* A Security Warning message will be appeared. Click on "**Open**"   
+* A Security Warning message will be appeared. Click on "**Open**"  
+
+  ![](/wfb-security-message.png)
+
+##### Step 2 :
+
+* To start install procedure, click on "**Install Certificate**"
+
+  ![](/wfb-installcertificate.png)
+
+##### Step 3 :
+
+* Now the Certificate Import Wizard will get open.
+
+
+* Select the store Location, by click on "Current User" 
+
+  ![](/wfbstore-location.png)
+
+  or "Local Machine" and then click on "**Next**".
+
+  ![](/wfbloacalmachine.png)
+
+##### Step 4 :
+
+* An administrator User Control window then asks for permission (no use of snippet possible). Please confirm.
+
+##### Step 5 :
+
+* Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
+
+  ![](/wfbbrowse.png)
+
+##### Step 6 :
+
+* Select the correct store (aka category) for the certificate: "**Trusted Root Authority Certificate"** and the click on "**OK**"
+
+  ![](/wfbcertificatestore.png)
+
+##### Step 6 :
+
+* Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
+* Select the Certificate file from your system and click on "**Open**".
+* After selecting the Certificate file, click on "**Next**".
+
+  ![](/wfbfile-to-import-next.png)
+
+##### Step 7 :
+
+* Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
 
 ### Import in Browser
 
