@@ -197,9 +197,9 @@ Click to open the system's certificate manager
 
 ##### Step 2 :
 
-* To start install procedure, click on "**Install Certificate**"
+To start install procedure, click on "**Install Certificate**
 
-  ![](/wfb-installcertificate.png)
+![](/wfb-installcertificate.png)
 
 ##### Step 3 :
 
@@ -216,25 +216,25 @@ Click to open the system's certificate manager
 
 ##### Step 4 :
 
-* An administrator User Control window then asks for permission (no use of snippet possible). Please confirm.
+An administrator User Control window then asks for permission (no use of snippet possible). Please confirm.
 
 ##### Step 5 :
 
-* Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
+Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
 
-  ![](/wfbbrowse.png)
-
-##### Step 6 :
-
-* Select the correct store (aka category) for the certificate: "**Trusted Root Authority Certificate"** and the click on "**OK**"
-
-  ![](/wfbcertificatestore.png)
+![](/wfbbrowse.png)
 
 ##### Step 6 :
 
-* After selecting the .crt file, click on "**Next**".
+Select the correct store (aka category) for the certificate: "**Trusted Root Authority Certificate"** and the click on "**OK**"
 
-  ![](/wfbfile-to-import-next.png)
+* ![](/wfbcertificatestore.png)
+
+##### Step 6 :
+
+After selecting the .crt file, click on "**Next**".
+
+![](/wfbfile-to-import-next.png)
 
 ##### Step 7 :
 
@@ -255,9 +255,21 @@ Click to open the system's certificate manager
 
 ### Import in Browser
 
+#### Firefox
+
+To Import an additional root-certificate to the Firefox browser, please follow the below steps: 
+
+##### Step 1 :
+
+Click on "**Options**" in Firefox browser menu.
+
+![](/firefox-option.png)
+
+##### Step 2 :
+
 This section is for importing the certificate in a browser
 
-#### Firefox
+#### 
 
 This section is for importing the certificate in Firefox browser
 
