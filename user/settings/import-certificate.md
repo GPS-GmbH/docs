@@ -7,7 +7,9 @@ To install the self signed root certificate for your system please follow your s
 
 ## Root Certificate
 
-Please download the root certificate file from [here](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Root Certificate").
+Please download the root certificate file from below.
+
+##### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
 ## Windows
 
@@ -102,7 +104,7 @@ Please follow the below steps to add an exception in Edge browser.
 
 ##### Result
 
-The Icon below shows that the certificate is not imported. Repeat the procedure from step 1 again untill the Icon get turn green. 
+The Icon below shows that the certificate is not imported. Repeat the procedure from step 1 again untill the Icon get turn green.
 
 ![](/certificateerror.png)
 
@@ -159,11 +161,9 @@ Click to open the "**Manage certificate**"
 * Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
 
   ![](/certificateimportwizard.png)
-
-
 * Click on "**Browse**" to specify the file you want to import.
 
-  ![](/chromebrowse.png)  
+  ![](/chromebrowse.png)
 * Select the Certificate file from your system and click on "**Open**".
 
   ![](/chromerootcertfile.png)
@@ -179,7 +179,7 @@ Click to open the "**Manage certificate**"
 
 ##### Step 8 :
 
-* Click on "**Finish**" to complete the installation process of certificate Import. 
+* Click on "**Finish**" to complete the installation process of certificate Import.
 
   ![](/chromefinish.png)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
@@ -195,7 +195,7 @@ Click to open the "**Manage certificate**"
 * Select the **.crt file** from your system.
 
   ![](/wfb-open-cert-file.png)
-* A Security Warning message will be appeared. Click on "**Open**"  
+* A Security Warning message will be appeared. Click on "**Open**"
 
   ![](/wfb-security-message.png)
 
@@ -208,9 +208,7 @@ To start install procedure, click on "**Install Certificate**
 ##### Step 3 :
 
 * Now the Certificate Import Wizard will get open.
-
-
-* Select the Store Location, by click on "Current User" 
+* Select the Store Location, by click on "Current User"
 
   ![](/wfbstore-location.png)
 
@@ -248,7 +246,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 8 :
 
-* Click on "**Finish**" to complete the installation process for certificate. 
+* Click on "**Finish**" to complete the installation process for certificate.
 
   ![](/chromefinish.png)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
@@ -259,7 +257,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ### Import in Browser (Firefox only)
 
-To Import an additional root-certificate to the Firefox browser, please follow the below steps: 
+To Import an additional root-certificate to the Firefox browser, please follow the below steps:
 
 ##### Step 1 :
 
@@ -269,7 +267,7 @@ Click on "**Options**" in Firefox browser menu.
 
 ##### Step 2 :
 
-* To find the browser's Certificate Manager, click on "**Privacy & Security**" option and select the given options. 
+* To find the browser's Certificate Manager, click on "**Privacy & Security**" option and select the given options.
 
   ![](/firefoxprivacy-security.png)
 * After selecting the appropriate options, click on "**View Certificates.**."
