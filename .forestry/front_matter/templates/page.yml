@@ -1,7 +1,13 @@
 ---
 label: Page
 hide_body: false
-fields: []
+fields:
+- type: text
+  name: actionText
+  label: actionText
+- type: text
+  name: actionLink
+  label: actionLink
 pages:
 - assets.md
 - developer/index.md
