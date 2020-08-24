@@ -92,7 +92,7 @@ Click on "**Get Started**"
 
 ![](/admin-account-next.jpg)
 
-### Final Installation Process
+## Final Installation Process
 
 SICON.OS Software starts downloading. Please wait, it may take a few seconds.
 
