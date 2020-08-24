@@ -1,4 +1,6 @@
 ---
+actionText: Download Certificate
+actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 
 ---
 # Import Certificate
