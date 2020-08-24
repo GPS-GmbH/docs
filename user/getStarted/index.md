@@ -55,3 +55,41 @@ To Install our SICON.OS Software, please follow the steps given below:
 * You will recieve an email of confimation on your email account, click on "**Confirm Email**"
 
   ![](/confirm-email-1.jpg)
+* Your account get successfully created.
+
+  ![](/account-craeted.jpg)
+
+### Step 6: Account Sign-in
+
+* Sign-in to the account by filling your Email address and Password.
+* Then click on "**Login**" to proceed further.
+
+![](/sign-in-account.jpg)
+
+### Step 7: License
+
+* Click on "**Get a free License**"
+
+![](/get-a-free-license.jpg)
+
+* You will get the current License details for your device 
+*  Click on "**Next**" to proceed further.
+
+![](/get-a-free-license-next.jpg)
+
+### Step 7: User Management
+
+* Create Admin account for your SICON.OS by giving Username and Password.
+* Click on "**Next**" to proceed further.
+
+![](/admin-account-next.jpg)
+
+* SICON.OS Software starts downloading. Please wait, it may take a few seconds.
+
+![](/downloading-sicon-os-software-1.jpg)
+
+* Wait untill all the basic containers get installed. After that you will be redirected to the main page.
+
+![](/downloading-sicon-os-software-3.jpg)
+
+![](/downloading-complete.jpg)
