@@ -29,7 +29,7 @@ To Install our SICON.OS Software, please follow the steps given below:
 
 ![](/get-started.jpg)
 
-### Step 3 : Accepting Terms & Conditions
+### Step 3 : Accept Terms & Conditions
 
 * Read carefully the Terms & Conditions for the Software installation
 * Check-on the option to accept the "**Terms stated above**"
@@ -45,3 +45,13 @@ To Install our SICON.OS Software, please follow the steps given below:
 * Then click on "**Sign-up**". 
 
 ![](/sign-up-page.jpg)
+
+### Step 5: E-mail confirmation
+
+* Confirm your email address
+
+![](/confirm-email.jpg)
+
+* You will recieve an email of confimation on your email account, click on "**Confirm Email**"
+
+  ![](/confirm-email-1.jpg)
