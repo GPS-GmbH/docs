@@ -93,3 +93,12 @@ To Install our SICON.OS Software, please follow the steps given below:
 ![](/downloading-sicon-os-software-3.jpg)
 
 ![](/downloading-complete.jpg)
+
+* Again fill your Username & Password to login.
+* Click on "**Login**"
+
+![](/log-in.jpg)
+
+* The page will get open.
+
+![](/welcome-page.jpg)
