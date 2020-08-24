@@ -4,7 +4,7 @@ heroText: Sicon.OS Documentation
 heroBackground: ''
 tagline: Bring your own device. Just plug!
 actionText: Get Started →
-actionLink: "/user/getStarted"
+actionLink: "/user/getStarted/"
 features:
 - title: User Guide
   details: Learn how to set up devices, make your unconnected devices IoT ready and
