@@ -171,13 +171,9 @@ Click on "**Import**"
 * After selecting the .crt file, click on "**Next**".
 
   ![](/2020-08-25-15_21_42-certificate-import-wizard.jpg)
-
-
 * Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
   ![](/2020-08-25-15_21_45-certificate-import-wizard.jpg)
-
-
 * Click on "**Finish**" to complete the installation process of certificate Import.
 
   ![](/2020-08-25-15_21_48-certificate-import-wizard.jpg)
@@ -248,9 +244,9 @@ Confirm the store by selecting "Place all certificates in the following store" a
 * Click on "**Finish**" to complete the installation process for certificate.
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
 
-  ![](/chromesecuritywarning.png)
+  ![](/2020-08-25-15_26_33-security-warning.jpg)
 
-  ![](/installationcomplete.png)
+  ![](/2020-08-25-15_26_37-certificate-import-wizard.jpg)
 
 ### Import in Browser (Firefox only)
 
