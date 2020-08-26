@@ -67,7 +67,7 @@ Please follow the below steps to add an exception in Chrome browser.
 * In Chrome browser open your SICON.OS website.
 * On page load, Click on the option "**Advanced**".
 
-![](/advance.png)
+![](/2020-08-25-14_47_35-privacy-error.jpg)
 
 ##### Step 2 :
 
