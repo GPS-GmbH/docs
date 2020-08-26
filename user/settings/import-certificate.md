@@ -215,11 +215,11 @@ To start install procedure, click on "**Install Certificate..**"
 * Now the Certificate Import Wizard will get open.
 * Select the Store Location, by click on "Current User"
 
-  ![](/wfbstore-location.png)
+  ![](/2020-08-25-15_24_50-certificate-import-wizard.jpg)
 
   or "Local Machine" and then click on "**Next**".
 
-  ![](/wfbloacalmachine.png)
+  ![](/2020-08-25-15_25_30-certificate-import-wizard.jpg)
 
 ##### Step 4 :
 
@@ -229,7 +229,7 @@ An administrator User Control window then asks for permission (no use of snippet
 
 Confirm the store by selecting "Place all certificates in the following store" and click on "**Browse**"
 
-![](/wfbbrowse.png)
+![](/2020-08-25-15_26_07-certificate-import-wizard.jpg)
 
 ##### Step 6 :
 
