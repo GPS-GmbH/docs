@@ -248,6 +248,12 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
   ![](/2020-08-25-15_26_37-certificate-import-wizard.jpg)
 
+#### Via Edge browser
+
+##### Step 1 :
+
+To be continued................
+
 ### Import in Browser (Firefox only)
 
 To Import an additional root-certificate to the Firefox browser, please follow the below steps:
