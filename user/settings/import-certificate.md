@@ -233,7 +233,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 6 :
 
-Select the correct store (aka category) for the certificate: "**Trusted Root Certification Authorities"** and the click on "**OK**"
+Select the correct store (aka category) for the certificate: "**Trusted Root Certification Authorities"** and then click on "**OK**"
 
 ![](/2020-08-25-15_26_22-select-certificate-store.jpg)
 
