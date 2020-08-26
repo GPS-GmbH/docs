@@ -135,6 +135,12 @@ Click to open "**Privacy and security"**
 
 ##### Step 3 :
 
+Click to open "**Security"**
+
+![](/2020-08-25-15_19_43-settings.jpg)
+
+##### Step 3 :
+
 Click to open the "**Manage certificate**"
 
 ![](/chromecertificatemanage.png)
