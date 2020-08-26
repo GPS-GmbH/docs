@@ -164,10 +164,10 @@ Click on "**Import**"
   ![](/2020-08-25-15_21_13-certificate-import-wizard.jpg)
 * Click on "**Browse**" to specify the file you want to import.
 
-  ![](/chromebrowse.png)
-* Select the Certificate file from your system and click on "**Open**".
+  ![](/2020-08-25-15_21_16-certificate-import-wizard.jpg)
+* Select the Certificate file (.crt) from your system and click on "**Open**".
 
-  ![](/chromerootcertfile.png)
+  ![](/2020-08-25-15_21_38-open.jpg)
 * After selecting the .crt file, click on "**Next**".
 
   ![](/chromenext.png)
