@@ -123,9 +123,9 @@ There are two methods to import the certificate system wide, import via Chrome b
 
 ##### Step 1 :
 
-Open "**Settings"** in Chrome
+Open "**Settings"** in Chrome.
 
-![](/settingsinchrome.png)
+![](/2020-08-25-15_19_25-greenshot.jpg)
 
 ##### Step 2 :
 
