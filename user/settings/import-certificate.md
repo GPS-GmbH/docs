@@ -170,7 +170,7 @@ Click on "**Import**"
   ![](/2020-08-25-15_21_38-open.jpg)
 * After selecting the .crt file, click on "**Next**".
 
-  ![](/chromenext.png)
+  ![](/2020-08-25-15_21_42-certificate-import-wizard.jpg)
 
 ##### Step 7 :
 
