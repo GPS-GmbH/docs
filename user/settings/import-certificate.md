@@ -147,16 +147,15 @@ Then click on "**Manage certificates**"
 
 ##### Step 4 :
 
-* Click on the "**Trusted Root Authority Certificate"**.
-* Select the correct store (aka category) for the certificate.
+Click on the "**Trusted Root Certification"**.
 
-  ![](/trustedrootauthoritycertificate.png)
+![](/2020-08-25-15_21_07-certificates.jpg)
 
 ##### Step 5 :
 
-* Now "**select the Certificate file**" from the store and click on "**Import**"
+Click on "**Import**"
 
-  ![](/cert-file.png)
+![](/2020-08-25-15_21_10-certificates.jpg)
 
 ##### Step 6 :
 
