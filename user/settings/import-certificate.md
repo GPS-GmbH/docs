@@ -94,9 +94,9 @@ Please follow the below steps to add an exception in Edge browser.
 
 ##### Step 2 :
 
-* Click on "**Go on to the webpage**".
+* Click on "**Continue to hostname.local (Unsafe)**"
 
-  ![](/gotowebpage.png)
+![](/2020-08-25-14_50_51-privacy-error-profile-1-microsoft-edge.jpg)
 
 ##### Result
 
