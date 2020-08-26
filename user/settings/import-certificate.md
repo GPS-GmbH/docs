@@ -73,13 +73,13 @@ Please follow the below steps to add an exception in Chrome browser.
 
 Click on "**Proceed to hostname.local (Unsafe)**"
 
-![](/proceed-with-unsafe.png)
+![](/2020-08-25-14_47_39-privacy-error.jpg)
 
 ##### Result
 
 The Icon below shows that it is unclear if the certificate is imported.
 
-![](/chrome-result.png)
+![](/2020-08-25-14_48_16-sicon-os.jpg)
 
 #### Exception in Edge
 
