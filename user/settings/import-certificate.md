@@ -172,11 +172,10 @@ Click on "**Import**"
 
   ![](/2020-08-25-15_21_42-certificate-import-wizard.jpg)
 
-##### Step 7 :
 
 * Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
-  ![](/chromecertificatestore.png)
+  ![](/2020-08-25-15_21_45-certificate-import-wizard.jpg)
 
 ##### Step 8 :
 
