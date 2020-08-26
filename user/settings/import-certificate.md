@@ -48,9 +48,9 @@ Please follow the below steps to add an exception in Firefox browser.
 
 ##### Step 2 :
 
-Click on "**Add Exception...**"
+Click on "**Accept the Risk and Continue**"
 
-![](/image2018-12-14_13-5-32.png)
+![](/2020-08-25-14_53_26-warning_-potential-security-risk-ahead.jpg)
 
 ##### Step 3 :
 
