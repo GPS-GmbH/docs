@@ -206,9 +206,9 @@ The Icon below shows that the certificate is imported.
 
 ##### Step 2 :
 
-To start install procedure, click on "**Install Certificate**
+To start install procedure, click on "**Install Certificate..**"
 
-![](/wfb-installcertificate.png)
+![](/2020-08-25-15_24_42-certificate.jpg)
 
 ##### Step 3 :
 
