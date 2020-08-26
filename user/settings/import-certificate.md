@@ -161,7 +161,7 @@ Click on "**Import**"
 
 * Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
 
-  ![](/certificateimportwizard.png)
+  ![](/2020-08-25-15_21_13-certificate-import-wizard.jpg)
 * Click on "**Browse**" to specify the file you want to import.
 
   ![](/chromebrowse.png)
