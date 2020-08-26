@@ -88,9 +88,9 @@ Please follow the below steps to add an exception in Edge browser.
 ##### Step 1 :
 
 * In Edge browser open your SICON.OS website.
-* On page load, Click on "**Details**"
+* On page load, Click on "**Advanced**"
 
-  ![](/details.png)
+![](/2020-08-25-14_50_44-privacy-error-profile-1-microsoft-edge.jpg)
 
 ##### Step 2 :
 
