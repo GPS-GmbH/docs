@@ -199,7 +199,7 @@ The Icon below shows that the certificate is imported.
 
 * Select the **.crt file** from your system.
 
-  ![](/wfb-open-cert-file.png)
+  ![](/2020-08-25-15_24_30-os-c_.jpg)
 * A Security Warning message will be appeared. Click on "**Open**"
 
   ![](/wfb-security-message.png)
