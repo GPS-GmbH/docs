@@ -52,17 +52,11 @@ Click on "**Accept the Risk and Continue**"
 
 ![](/2020-08-25-14_53_26-warning_-potential-security-risk-ahead.jpg)
 
-##### Step 3 :
-
-Click on "**Confirm Security Exception**"
-
-![](/image2018-12-14_13-6-25.png)
-
 ##### Result
 
 The Icon below shows that the certificate is imported.
 
-![](/firefox_result.png)
+![](/2020-08-25-14_53_56-sicon-os.jpg)
 
 #### Exception in Chrome
 
