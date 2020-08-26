@@ -177,16 +177,21 @@ Click on "**Import**"
 
   ![](/2020-08-25-15_21_45-certificate-import-wizard.jpg)
 
-##### Step 8 :
 
 * Click on "**Finish**" to complete the installation process of certificate Import.
 
-  ![](/chromefinish.png)
+  ![](/2020-08-25-15_21_48-certificate-import-wizard.jpg)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
 
-  ![](/chromesecuritywarning.png)
+  ![](/2020-08-25-15_21_51-security-warning.jpg)
 
-  ![](/installationcomplete.png)
+  ![](/2020-08-25-15_21_55-certificate-import-wizard.jpg)
+
+##### Result
+
+The Icon below shows that the certificate is imported.
+
+![](/2020-08-25-15_22_27-sicon-os.jpg)
 
 #### Via Windows file browser
 
