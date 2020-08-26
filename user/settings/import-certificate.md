@@ -44,7 +44,7 @@ Please follow the below steps to add an exception in Firefox browser.
 * In Firefox browser, Open your SICON.OS website.
 * On page load, Click on the option "**Advanced**".
 
-  ![](/image2018-12-14_13-32-4.png)
+  ![](/2020-08-25-14_53_11-warning_-potential-security-risk-ahead.jpg)
 
 ##### Step 2 :
 
