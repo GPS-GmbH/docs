@@ -129,9 +129,9 @@ Open "**Settings"** in Chrome.
 
 ##### Step 2 :
 
-Click to open "**Advanced Settings"**
+Click to open "**Privacy and security"**
 
-![](/chromeadvancedsettings.png)
+![](/2020-08-25-15_19_35-settings.jpg)
 
 ##### Step 3 :
 
