@@ -237,23 +237,15 @@ Select the correct store (aka category) for the certificate: "**Trusted Root Cer
 
 ![](/2020-08-25-15_26_22-select-certificate-store.jpg)
 
-##### Step 6 :
-
-After selecting the .crt file, click on "**Next**".
-
-![](/wfbfile-to-import-next.png)
-
 ##### Step 7 :
 
 Confirm the store by selecting "Place all certificates in the following store" and click on "**Next**"
 
-* ![](/chromecertificatestore.png)
+![](/2020-08-25-15_26_26-certificate-import-wizard.jpg)
 
 ##### Step 8 :
 
 * Click on "**Finish**" to complete the installation process for certificate.
-
-  ![](/chromefinish.png)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
 
   ![](/chromesecuritywarning.png)
