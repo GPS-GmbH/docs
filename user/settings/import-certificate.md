@@ -278,6 +278,8 @@ Click on the "**Trusted Root Certification"**.
 
 Click on "**Import**"
 
+![](/2020-08-25-15_04_41-certificates.jpg)
+
 To be continued................
 
 ### Import in Browser (Firefox only)
