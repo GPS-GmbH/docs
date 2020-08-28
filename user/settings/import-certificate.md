@@ -252,6 +252,32 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 1 :
 
+Open your Edge browser system and click to open the "**Settings**".
+
+![](/2020-08-25-15_01_28-settings.jpg)
+
+##### Step 2 :
+
+Click to open "**Privacy and security"**
+
+![](/2020-08-25-15_01_54-settings-profile-1-microsoft-edge.jpg)
+
+##### Step 3:
+
+Then click on "**Manage certificates**"
+
+![](/2020-08-25-15_01_54-settings-manage-certificates.jpg)
+
+##### Step 4 :
+
+Click on the "**Trusted Root Certification"**.
+
+![](/2020-08-25-15_02_15-certificates.jpg)
+
+##### Step 5 :
+
+Click on "**Import**"
+
 To be continued................
 
 ### Import in Browser (Firefox only)
