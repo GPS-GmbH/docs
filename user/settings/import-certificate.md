@@ -294,14 +294,24 @@ Click on "**Import**"
   ![](/2020-08-25-15_09_22-open.jpg)
 * After selecting the .crt file, click on "**Next**".
 
-  ![](/2020-08-25-15_21_42-certificate-import-wizard.jpg)
+  ![](/2020-08-25-15_09_28-certificate-import-wizard.jpg)
 * Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
-  ![](/2020-08-25-15_21_45-certificate-import-wizard.jpg)
+  ![](/2020-08-25-15_09_32-certificate-import-wizard.jpg)
 * Click on "**Finish**" to complete the installation process of certificate Import.
 
-  ![](/2020-08-25-15_21_48-certificate-import-wizard.jpg)
+  ![](/2020-08-25-15_09_36-certificate-import-wizard.jpg)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
+
+  ![](/2020-08-25-15_09_42-security-warning.jpg)
+
+  ![](/2020-08-25-15_09_49-certificate-import-wizard.jpg)
+
+##### Result
+
+The Icon below shows that the certificate is imported.
+
+![](/2020-08-25-15_11_02-sicon-os-profile-1-microsoft-edge.jpg)
 
 To be continued................
 
