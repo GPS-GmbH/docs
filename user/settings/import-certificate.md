@@ -313,8 +313,6 @@ The Icon below shows that the certificate is imported.
 
 ![](/2020-08-25-15_11_02-sicon-os-profile-1-microsoft-edge.jpg)
 
-To be continued................
-
 ### Import in Browser (Firefox only)
 
 To Import an additional root-certificate to the Firefox browser, please follow the below steps:
@@ -323,16 +321,16 @@ To Import an additional root-certificate to the Firefox browser, please follow t
 
 Click on "**Options**" in Firefox browser menu.
 
-![](/firefox-option.png)
+![](/2020-08-25-15_38_58-greenshot.jpg)
 
 ##### Step 2 :
 
-* To find the browser's Certificate Manager, click on "**Privacy & Security**" option and select the given options.
+* Click on "**Privacy & Security**" option.
 
-  ![](/firefoxprivacy-security.png)
+  ![](/2020-08-25-15_39_11-options.jpg)
 * After selecting the appropriate options, click on "**View Certificates.**."
 
-  ![](/firefoxviewcertificates.png)
+  ![](/2020-08-25-15_39_26-options.jpg)
 
 ##### Step 3 :
 
