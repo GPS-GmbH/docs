@@ -340,20 +340,22 @@ To Import the certificate file:
 * Select the "**Authorities**" panel.
 * Then click on "**Import**" option given below.
 
-  ![](/firefoxcertificate-manager.png)
+  ![](/2020-08-25-15_39_53-options.jpg)
 * Now select the .crt file you want to import from your system and click on "**Open**"
+
+  ![](/2020-08-25-15_40_06-select-file-containing-ca-certificate-s-to-import.jpg)
 
 ##### Step 4 :
 
 Set the purposes for the certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
 
-![](/firefoxdownloadingcertificate.png)
+![](/2020-08-25-15_40_38-downloading-certificate.jpg)
 
 ##### Result :
 
-The certificate will get imported successfully. (The Icon will turn green.)
+The certificate will get imported successfully.
 
-![](/firefoxresult.png)
+![](/2020-08-25-15_41_54-sicon-os.jpg)
 
 ## Mac
 
