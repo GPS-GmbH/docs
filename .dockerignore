@@ -1,0 +1,9 @@
+.forestry
+.vscode
+.vscode
+node_modules
+dist
+Dockerfile
+.dockerignore
+.gitignore
+*.log
