@@ -24,4 +24,4 @@ footer: ''
 With the sicon ecosystem, you can easily collect, aggregate and visualize data of any sensor.
 Do you need a better overview of Sicon.OS capabilities? [Visit the website](https://gps-stuttgart.de)
 
-![](/sicon-infographics-v2-1.gif)![](/sicon-infographics-v2-1.gif)
+![](/sicon-infographics-v2-1.gif)
