@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Sicon.OS Documentation
-heroBackground: ''
+heroBackground: "/untitled-2.png"
 tagline: Bring your own device. Just plug!
 actionText: Get Started →
 actionLink: "/user/getStarted/"
