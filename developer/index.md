@@ -20,7 +20,7 @@ MQTT serves as event stream to react on sensor data change.
 
 ## Developing an App
 
-![](/app-workflow.jpg)
+![](/untitled-2.png)
 
 1. [Develop the application](./apps/create-app.md)
 2. [Publish the application](./apps/publish-app.md)
