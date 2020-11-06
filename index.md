@@ -1,7 +1,7 @@
 ---
 home: true
 heroText: Sicon.OS Documentation
-heroBackground: "/untitled-2.png"
+heroBackground: ''
 tagline: Bring your own device. Just plug!
 actionText: Get Started →
 actionLink: "/user/getStarted/"
@@ -24,4 +24,4 @@ footer: ''
 With the sicon ecosystem, you can easily collect, aggregate and visualize data of any sensor.
 Do you need a better overview of Sicon.OS capabilities? [Visit the website](https://gps-stuttgart.de)
 
-![](/access.jpg)
+![](/sicon-infographics-v2-1.gif)![](/sicon-infographics-v2-1.gif)
