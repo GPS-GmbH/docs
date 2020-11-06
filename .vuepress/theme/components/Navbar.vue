@@ -1,5 +1,5 @@
 <template>
-  <header class="navbar">
+  <header class="navbar bg-dark text-gray-200">
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 
     <router-link
@@ -102,12 +102,10 @@ $navbar-horizontal-padding = 1.5rem
   .site-name
     font-size 1.3rem
     font-weight 600
-    color $textColor
     position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
-    background-color white
     white-space nowrap
     font-size 0.9rem
     position absolute

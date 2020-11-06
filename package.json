@@ -22,7 +22,7 @@
   "devDependencies": {
     "@vuepress/plugin-medium-zoom": "^1.0.0-rc.1",
     "css-loader": "^3.6.0",
-    "vuepress": "^1.2.0"
+    "vuepress": "^1.7.1"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -32,6 +32,6 @@
     "ramda": "^0.26.1",
     "swagger-ui": "^3.23.11",
     "swagger-ui-dist": "^3.24.2",
-    "tailwindcss": "^1.1.2"
+    "tailwindcss": "^1.9.6"
   }
 }

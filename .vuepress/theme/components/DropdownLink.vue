@@ -168,10 +168,9 @@ export default {
       position absolute
       top 100%
       right 0
-      background-color #fff
+      @apply bg-dark
       padding 0.6rem 0
-      border 1px solid #ddd
-      border-bottom-color #ccc
+      border 1px solid #040404
       text-align left
       border-radius 0.25rem
       white-space nowrap

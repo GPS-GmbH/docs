@@ -1,8 +1,6 @@
 // Theme API.
 const tailwindcss = require('tailwindcss')
 const glob = require('glob')
-    // const getSidebar = require('./sidebar')
-
 const title = 'Sicon.OS Documentation'
 const description = 'Documentation for users and developers'
 const ogprefix = 'og: http://ogp.me/ns#'
@@ -22,26 +20,25 @@ const getChildren = (parentPath) => {
         .sort()
 }
 const locales = {
-        '/': {
-            lang: 'English',
-            title: 'Sicon.OS Documentation',
-            description: 'Vue-powered Static Site Generator',
-        },
-        '/de/': {
-            lang: 'Deutsch',
-            title: 'Sicon.OS Dokumentation',
-            description: 'Dokumentation zu Sicon APPs, PLUGs und OS',
-        },
-    }
+    '/': {
+        lang: 'English',
+        title: 'Sicon.OS Documentation',
+        description: 'Vue-powered Static Site Generator',
+    },
+    '/de/': {
+        lang: 'Deutsch',
+        title: 'Sicon.OS Dokumentation',
+        description: 'Dokumentation zu Sicon APPs, PLUGs und OS',
+    },
+}
+console.log('base', process.env.BASE)
     // const sidebar = require('./sidebar')(path.relative(__dirname, '../'), locales)
     // console.log('sidebar', sidebar)
 
 const config = async() => ({
+    base: process.env.BASE || '/',
     title,
     head: [
-        ['link', { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css' }],
-        ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.13.0/css/brands.css' }],
-        ['link', { rel: 'stylesheet', href: 'https://use.fontawesome.com/releases/v5.13.0/css/fontawesome.css' }],
         ['link', { rel: 'icon', href: `/assets/favicon.ico` }],
         ['meta', { name: 'theme-color', content: color }],
         ['meta', { prefix: ogprefix, property: 'og:title', content: title }],

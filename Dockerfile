@@ -13,7 +13,9 @@ ADD package.json .
 
 RUN yarn
 
+
 ADD . .
+ARG BASE=/
 
 RUN yarn build
 ENV PORT 80
