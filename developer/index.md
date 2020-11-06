@@ -3,12 +3,11 @@
 ---
 # Developer Guide
 
-Overview of the Sicon.OS Platform
+Overview of the SICON.OS Platform
 
-## Developing with Sicon
+## Developing with SICON
 
-Everything starts with consuming the data from sensors and either visualizing or further processing them.
-With standardized protocols, you have access to the data sicon collects. Including devices, parameters, events and historical data.
+Everything starts with consuming the data from sensors and either visualizing or further processing them. With standardized protocols, you have access to the data SICON collects. Including devices, parameters, events and historical data.
 
 ### Rest API
 
