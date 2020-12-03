@@ -13,7 +13,7 @@ Everything starts with consuming the data from sensors and either visualizing or
 
 With the interactive [Rest API](./restapi.md) documentation, you can quickly create customized visualization or logic.
 
-##### [Rest API Documentation](https://docs.exa.sicon.io/developer/restapi.html "#Rest API Documentation")
+#### [Rest API Documentation](https://docs.exa.sicon.io/developer/restapi.html "#Rest API Documentation")
 
 ### MQTT
 
