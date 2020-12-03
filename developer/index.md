@@ -13,6 +13,8 @@ Everything starts with consuming the data from sensors and either visualizing or
 
 With the interactive [Rest API](./restapi.md) documentation, you can quickly create customized visualization or logic.
 
+#### [Link to the Rest API](https://docs.exa.sicon.io/developer/restapi.html "Rest API")
+
 ### MQTT
 
 MQTT serves as event stream to react on sensor data change.
