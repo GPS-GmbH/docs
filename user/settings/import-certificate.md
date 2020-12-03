@@ -23,7 +23,7 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 
 ### Exception in Browser
 
-**Advantage:**
+**Advantages:**
 
 * Quickly done.
 * The customer does not need to get our root certificate.
