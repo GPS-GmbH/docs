@@ -33,7 +33,7 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 * The system/browser is trusting the certificate on an exception base only. (Icon does not turn green.)
 * It must be done for all browsers separately.
 * If we ever need further certificates, i.e. for the OPC UA server, new exceptions must be granted.
-* As a result of this test: Edge browser needs the confirmation of the exception for every session.
+* As a result of this test, Edge browser needs the confirmation of the exception for every session.
 
 #### Exception in FireFox
 
