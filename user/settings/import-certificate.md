@@ -349,7 +349,7 @@ To Import the certificate file:
 
 ##### Step 4 :
 
-Set the purposes for the certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
+Set the purpose for the certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
 
 ![](/2020-08-25-15_40_38-downloading-certificate.jpg)
 
