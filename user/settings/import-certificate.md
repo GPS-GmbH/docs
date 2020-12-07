@@ -119,7 +119,7 @@ There are two methods to import the certificate system wide, import via Chrome b
 **Disadvantages:**
 
 * Lots of steps.
-* Customer must get the root certificate on a separate way.
+* You must get the root certificate on a separate way.
 
 #### Via Chrome browser
 
