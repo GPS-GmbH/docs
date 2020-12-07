@@ -338,7 +338,7 @@ Click on "**Options**" in Firefox browser menu.
 
 To Import the certificate file:
 
-* After click on the "View Certificate", the Certificate Manager page will be opened.
+* After clicking on the "View Certificate", the Certificate Manager page will be opened.
 * Select the "**Authorities**" panel.
 * Then click on "**Import**" option given below.
 
