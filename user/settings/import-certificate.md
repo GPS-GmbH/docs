@@ -143,7 +143,7 @@ Click on "**Security"**
 
 ##### Step 4 :
 
-Then click on "**Manage certificates**"
+Click on "**Manage certificates**"
 
 ![](/2020-08-25-15_19_51-settings-security.jpg)
 
