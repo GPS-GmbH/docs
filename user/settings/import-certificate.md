@@ -31,6 +31,8 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 **Disadvantages:**
 
 * The system/browser is trusting the certificate on an exception base only. (Icon does not turn green.)
+
+  ![](/exception_sicon-os.jpg)
 * It must be done for all browsers separately.
 * If we ever need further certificates, i.e. for the OPC UA server, new exceptions must be granted.
 * Edge browser needs the confirmation of the exception for every session.
