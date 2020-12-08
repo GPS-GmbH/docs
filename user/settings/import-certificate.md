@@ -106,7 +106,9 @@ The Icon below shows that it is unclear if the certificate is imported.
 
 ![](/2020-08-25-14_51_21-sicon-os-profile-1-microsoft-edge.jpg)
 
-### Import System Wide
+### Import the GPS Root Certificate
+
+##### On the Operating System level
 
 "I'm thorough and want the green security padlock when I'm using Chrome, Windows or Edge Browser"
 
