@@ -108,7 +108,11 @@ The Icon below shows that it is unclear if the certificate is imported.
 
 ### Import System Wide
 
-There are two methods to import the certificate system wide, import via Chrome browser or via windows file browser.
+There are three methods to import the certificate system wide, import via :
+
+* Chrome Browser
+* Windows File browser
+* Edge Browser
 
 **Advantages:**
 
