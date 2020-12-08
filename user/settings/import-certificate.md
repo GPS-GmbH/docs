@@ -113,14 +113,14 @@ The Icon below shows that it is unclear if the certificate is imported.
 There are three methods to import the GPS Root Certificate on the Operating System level, import via :
 
 * Chrome Browser
-* Windows File browser
+* Windows File Browser
 * Edge Browser
 
 **Advantages:**
 
 * With one import all SICON.OS installations show the green padlock.
-* With one import all browsers that use the trust center of the operating system will switch to green.
-* No repeated accepting of Certificates on edge browser.
+* With one import all Browsers that use the trust center of the operating system will switch to green.
+* No repeated accepting of Certificates on Edge Browser.
 
 **Disadvantages:**
 
