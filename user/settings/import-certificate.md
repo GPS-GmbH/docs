@@ -3,30 +3,30 @@ actionText: Download Certificate
 actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 
 ---
-# Import Certificate
+# Introduction/Objective
 
-To install the self signed root certificate for your system please follow your system specific guide.
+The use of https, i.e. http secured over [SSL](https://en.wikipedia.org/Secure%20Socket%20Layer) or [TLS](https://en.wikipedia.org/Transport%20Layer%20Security) requires Certificates to prove the page's authenticity. But that only transfers the trust issue from the web page to the Certificate. So to trust the page's Certificate, it must be validated (signed) by a commonly trusted Authority. These trust anchors are called Certificate Authorities. These Certificate Authorities issue Certificates on their own, which are included in the trust centers of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....). Or they are included in the Certificate management of the browser, like Firefox.
 
-## Root Certificate
+Since local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. This circumstance leads to warning dialogs of the browser, if the customer tries to load the web page of such a device via https.
 
-Please download the root certificate file from below.
-
-##### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
-
-## Windows
-
-There are three ways to use our preinstalled self signed certificate in Windows operating system:
+There are three options, to get around this warning dialogue:
 
 1. Add an exception in your browser (Firefox, Chrome and Edge browser).
-2. Import an additional root-certificate from us system wide (Chrome Browser, Windows File Browser and Edge Browser)
-3. Import an additional root-certificate from us to the browser (Firefox only)
+2. Import the GPS root certificate to the trust center of the operating system. That works, if you use the Edge or the Chrome browser
+3. Import the GPS root certificate to the browser. That works for Firefox.
 
-### Exception in Browser
+## GPS Root Certificate
+
+Please download the GPS Root Certificate file from below.
+
+#### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
+
+### "I want the quick fix" / Adding a certificate exception
 
 **Advantages:**
 
 * Quickly done.
-* No need to get the root certificate.
+* No need to import the GPS root certificate
 
 **Disadvantages:**
 
@@ -34,7 +34,7 @@ There are three ways to use our preinstalled self signed certificate in Windows 
 
   ![](/exception_sicon-os.jpg)
 * It must be done for all browsers separately.
-* If we ever need further certificates, i.e. for the OPC UA server, new exceptions must be granted.
+* Exceptions must be added for each installation (SICON.HW, SICON.VM,...).
 * Edge browser needs the confirmation of the exception for every session.
 
 #### Exception in FireFox
