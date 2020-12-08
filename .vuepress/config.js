@@ -66,7 +66,7 @@ const config = async() => ({
     },
     locales,
     themeConfig: {
-        sidebarDepth: 4,
+        sidebarDepth: 5,
         nav: [
             { text: 'Home', link: '/' },
             { text: 'User Guide', link: '/user/' },
