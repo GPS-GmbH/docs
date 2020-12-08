@@ -18,7 +18,7 @@ Please download the root certificate file from below.
 There are three ways to use our preinstalled self signed certificate in Windows operating system:
 
 1. Add an exception in your browser (Firefox, Chrome and Edge browser).
-2. Import an additional root-certificate from us system wide (Edge and Chrome)
+2. Import an additional root-certificate from us system wide (Chrome Browser, Windows File Browser and Edge Browser)
 3. Import an additional root-certificate from us to the browser (Firefox only)
 
 ### Exception in Browser
