@@ -21,7 +21,7 @@ Please download the GPS Root Certificate file from below.
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
-### "I want the quick fix" / Adding a certificate exception
+### Add Certificate Exception
 
 **Advantages:**
 
