@@ -119,7 +119,7 @@ There are three methods to import the GPS Root Certificate on the Operating Syst
 **Advantages:**
 
 * With one import all SICON.OS installations show the green padlock.
-* With one import all Browsers that use the trust center of the operating system will switch to green.
+* With one import all Browsers that use the trust center of the Operating System will switch to green.
 * No repeated accepting of Certificates on Edge Browser.
 
 **Disadvantages:**
