@@ -108,7 +108,9 @@ The Icon below shows that it is unclear if the certificate is imported.
 
 ### Import System Wide
 
-There are three methods to import the certificate system wide, import via :
+"I'm thorough and want the green security padlock when I'm using Chrome, Windows or Edge Browser"
+
+There are three methods to import the GPS Root Certificate on the Operating System level, import via :
 
 * Chrome Browser
 * Windows File browser
@@ -116,9 +118,9 @@ There are three methods to import the certificate system wide, import via :
 
 **Advantages:**
 
-* When the browsers accept the chosen key and signature algorithms and lengths, one import serves all browsers that use the system's certificate manager (currently edge and chrome)
-* GPS can issue further certificates without the customer's need to import anything again.
-* No repeated accepting of certificates on edge browser.
+* With one import all SICON.OS installations show the green padlock.
+* With one import all browsers that use the trust center of the operating system will switch to green.
+* No repeated accepting of Certificates on edge browser.
 
 **Disadvantages:**
 
