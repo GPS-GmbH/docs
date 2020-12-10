@@ -21,9 +21,9 @@ Please download the GPS Root Certificate file from below.
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
-## Windows Operating System
+## Windows OS
 
-### Add Certificate Exception
+### Browser Exception
 
 **Advantages:**
 
@@ -108,7 +108,7 @@ The Icon below shows that it is unclear if the certificate is imported.
 
 ![](/2020-08-25-14_51_21-sicon-os-profile-1-microsoft-edge.jpg)
 
-### Import the GPS Root Certificate
+### Import system wide
 
 ##### On the Operating System level
 
