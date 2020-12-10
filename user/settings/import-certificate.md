@@ -369,7 +369,7 @@ Set the purpose for the Certificate by selecting the option "**Trust this CA to 
 
 ##### Result :
 
-The certificate will get imported successfully.
+The certificate will get import successfully.
 
 ![](/2020-08-25-15_41_54-sicon-os.jpg)
 
