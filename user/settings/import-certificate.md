@@ -5,9 +5,13 @@ actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 ---
 # Import Certificate
 
-The use of https, i.e. http secured over [SSL](https://en.wikipedia.org/Secure%20Socket%20Layer) or [TLS](https://en.wikipedia.org/Transport%20Layer%20Security) requires Certificates to prove the page's authenticity. But that only transfers the trust issue from the web page to the Certificate. So to trust the page's Certificate, it must be validated (signed) by a commonly trusted Authority. These trust anchors are called Certificate Authorities. These Certificate Authorities issue Certificates on their own, which are included in the trust centers of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....). Or they are included in the Certificate management of the browser, like Firefox.
+Web browsers use Secure Sockets Layer (SSL) or Transport Layer Security (TLS), to encrypt traffic between Client Systems and Server Computers to protect the confidential data.
 
-Since local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. This circumstance leads to warning dialogs of the browser, if the customer tries to load the web page of such a device via https.
+The use of https, i.e. http secured over [SSL](https://en.wikipedia.org/Secure%20Socket%20Layer) or [TLS](https://en.wikipedia.org/Transport%20Layer%20Security) requires Certificates to prove the page's authenticity. The entity that issued the Certificate known as a ´Certificate Authority´ and the Certificate must also be trusted by the web browser, which involves installing the issuer Certificate so the browser knows that issuer is valid and reliable.
+
+These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....) or in the Certificate management of the browser, like Firefox.
+
+As the local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the web page of such a device via https, this leads to the warning dialogs of the browser.
 
 There are three options, to get around this warning dialogue:
 
