@@ -333,6 +333,8 @@ The Icon below shows that the Certificate is imported.
 
 ##### On the browser level
 
+"I'm thorough and want the green security padlock when I'm using Firefox"
+
 To Import the GPS Root Certificate in Firefox browser, please follow the below steps:
 
 ##### Step 1 :
