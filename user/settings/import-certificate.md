@@ -331,6 +331,8 @@ The Icon below shows that the Certificate is imported.
 
 ### Import in Browser (Firefox only)
 
+##### On the browser level
+
 To Import the GPS Root Certificate in Firefox browser, please follow the below steps:
 
 ##### Step 1 :
