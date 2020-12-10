@@ -12,8 +12,8 @@ Since local area devices are not reachable by a global URL or URN - like google.
 There are three options, to get around this warning dialogue:
 
 1. Add an exception in your browser (Firefox, Chrome and Edge browser).
-2. Import the GPS root certificate to the trust center of the operating system. That works, if you use the Edge or the Chrome browser
-3. Import the GPS root certificate to the browser. That works for Firefox.
+2. Import the GPS root certificate in your OS via the trust center of the operating system or via specific web browsers.
+3. Import the GPS root certificate only in the browser. That works for Firefox.
 
 ## Download Certificate
 
