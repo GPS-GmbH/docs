@@ -62,7 +62,7 @@ The Icon below shows that the certificate is imported.
 
 ![](/2020-08-25-14_53_56-sicon-os.jpg)
 
-#### Exception in Chrome
+###      Exception in Chrome
 
 Please follow the below steps to add an exception in Chrome browser.
 
