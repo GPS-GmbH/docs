@@ -163,7 +163,7 @@ Click on "**Manage certificates**"
 
 ##### Step 4 :
 
-Click on the "**Trusted Root Certification"**.
+Click on "**Trusted Root Certification"**.
 
 ![](/2020-08-25-15_21_07-certificates.jpg)
 
@@ -175,22 +175,22 @@ Click on "**Import**"
 
 ##### Step 6 :
 
-* Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
+* The Certificate Import Wizard will get open. Click on "**Next**" to continue.
 
   ![](/2020-08-25-15_21_13-certificate-import-wizard.jpg)
 * Click on "**Browse**" to specify the file you want to import.
 
   ![](/2020-08-25-15_21_16-certificate-import-wizard.jpg)
-* Select the Certificate file (.crt) from your system and click on "**Open**".
+* Select the Certificate file from your system and click on "**Open**".
 
   ![](/2020-08-25-15_21_38-open.jpg)
-* After selecting the .crt file, click on "**Next**".
+* Click on "**Next**".
 
   ![](/2020-08-25-15_21_42-certificate-import-wizard.jpg)
 * Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
   ![](/2020-08-25-15_21_45-certificate-import-wizard.jpg)
-* Click on "**Finish**" to complete the installation process of certificate Import.
+* Click on "**Finish**" to complete the installation process of Certificate Import.
 
   ![](/2020-08-25-15_21_48-certificate-import-wizard.jpg)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
@@ -201,7 +201,7 @@ Click on "**Import**"
 
 ##### Result
 
-The Icon below shows that the certificate is imported.
+The Icon below shows that the Certificate is imported.
 
 ![](/2020-08-25-15_22_27-sicon-os.jpg)
 
