@@ -21,6 +21,8 @@ Please download the GPS Root Certificate file from below.
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
+&nbsp;
+
 ## Windows OS
 
 ### Browser Exception
