@@ -39,7 +39,7 @@ Please download the GPS Root Certificate file from below.
 * Exceptions must be added for each installation (SICON.HW, SICON.VM,...).
 * Edge browser needs the confirmation of the exception for every session.
 
-### - Exception in FireFox
+### → Exception in FireFox
 
 Please follow the below steps to add an exception in Firefox browser.
 
@@ -62,7 +62,7 @@ The Icon below shows that the certificate is imported.
 
 ![](/2020-08-25-14_53_56-sicon-os.jpg)
 
-###      Exception in Chrome
+### → Exception in Chrome
 
 Please follow the below steps to add an exception in Chrome browser.
 
@@ -85,7 +85,7 @@ The Icon below shows that it is unclear if the certificate is imported.
 
 ![](/2020-08-25-14_48_16-sicon-os.jpg)
 
-### - Exception in Edge
+### → Exception in Edge
 
 Please follow the below steps to add an exception in Edge browser.
 
@@ -131,7 +131,7 @@ There are three methods to import the GPS Root Certificate on the Operating Syst
 * Lots of steps.
 * You must get the root certificate on a separate way.
 
-### - via Chrome browser
+### → Via Chrome browser
 
 ##### Step 1 :
 
@@ -201,7 +201,7 @@ The Icon below shows that the certificate is imported.
 
 ![](/2020-08-25-15_22_27-sicon-os.jpg)
 
-### - via Windows file browser
+### → Via Windows file browser
 
 ##### Step 1 :
 
@@ -260,7 +260,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
   ![](/2020-08-25-15_26_37-certificate-import-wizard.jpg)
 
-### - via Edge browser
+### → Via Edge browser
 
 ##### Step 1 :
 
