@@ -15,11 +15,13 @@ There are three options, to get around this warning dialogue:
 2. Import the GPS root certificate to the trust center of the operating system. That works, if you use the Edge or the Chrome browser
 3. Import the GPS root certificate to the browser. That works for Firefox.
 
-## Windows Operating System
+## Download Certificate
 
 Please download the GPS Root Certificate file from below.
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
+
+## Windows Operating System
 
 ### Add Certificate Exception
 
