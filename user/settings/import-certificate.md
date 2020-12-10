@@ -3,7 +3,7 @@ actionText: Download Certificate
 actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 
 ---
-# Introduction/Objective
+# Import Certificate
 
 The use of https, i.e. http secured over [SSL](https://en.wikipedia.org/Secure%20Socket%20Layer) or [TLS](https://en.wikipedia.org/Transport%20Layer%20Security) requires Certificates to prove the page's authenticity. But that only transfers the trust issue from the web page to the Certificate. So to trust the page's Certificate, it must be validated (signed) by a commonly trusted Authority. These trust anchors are called Certificate Authorities. These Certificate Authorities issue Certificates on their own, which are included in the trust centers of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....). Or they are included in the Certificate management of the browser, like Firefox.
 
