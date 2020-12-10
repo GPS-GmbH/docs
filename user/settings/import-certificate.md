@@ -14,7 +14,7 @@ As the local area devices are not reachable by a global URL or URN - like google
 There are three options, to get around this warning dialogue:
 
 1. Add an exception in your browser (Firefox, Chrome and Edge browser).
-2. Import the GPS Root Certificate in your OS via the trust center of the Operating System or via specific Web browsers.
+2. Import the GPS Root Certificate in your OS via the trust centre of the Operating System or via specific Web browsers.
 3. Import the GPS Root Certificate only in the browser. That works for Firefox.
 
 ## Download Certificate
@@ -126,8 +126,8 @@ There are three methods to import the GPS Root Certificate on the Operating Syst
 
 **Advantages:**
 
-* With one import all SICON.OS installations show the green padlock.
-* With one import all Browsers that use the trust center of the Operating System will switch to green.
+* All SICON.OS installations show the green padlock with single import.
+* All Browsers that use the trust centre of the Operating System will switch to green with single import.
 * No repeated accepting of Certificates on Edge Browser.
 
 **Disadvantages:**
