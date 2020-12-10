@@ -15,7 +15,7 @@ There are three options, to get around this warning dialogue:
 2. Import the GPS root certificate to the trust center of the operating system. That works, if you use the Edge or the Chrome browser
 3. Import the GPS root certificate to the browser. That works for Firefox.
 
-## GPS Root Certificate
+## Windows Operating System
 
 Please download the GPS Root Certificate file from below.
 
