@@ -5,11 +5,11 @@ actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 ---
 # Import Certificate
 
-Web browsers use Secure Sockets Layer ([SSL](https://en.wikipedia.org/wiki/Transport_Layer_Security)) or Transport Layer Security ([TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)), to encrypt traffic between Client Systems and Server Computers to protect the confidential data or to prove the page's authenticity. The entity that issued the Certificate known as \`Certificate Authority´(CA) and the Certificate must also be trusted by the web browser, which involves installing the issuer Certificate so the browser knows that issuer is valid and reliable.
+Web browsers use Secure Sockets Layer ([SSL](https://en.wikipedia.org/wiki/Transport_Layer_Security)) or Transport Layer Security ([TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)), to encrypt traffic between Client Systems and Server Computers to protect the confidential data or to prove the web page's authenticity. The entity that issue the Certificate is known as \`Certificate Authority´(CA) and the Certificate must also be trusted by the web browser, which involves installing the issuer Certificate so the browser knows that issuer is valid and reliable.
 
-These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....) or in the Certificate management of the browser, like Firefox.
+These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows OS, Apple's OSX, Android, iOS, iPadOS....) or in the Certificate management of the browser, like Firefox.
 
-As the local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the Web page of such a device via https, this leads to the warning dialog of the browser.
+As the local area network devices are not reachable by a global [URL](https://en.wikipedia.org/wiki/URL "URL") or [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name "URN") - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the Web page of such a device via https, this leads to the warning dialog of the browser.
 
 There are three options, to get around this warning dialog:
 
@@ -19,7 +19,7 @@ There are three options, to get around this warning dialog:
 
 ## Download Certificate
 
-Please download the GPS Root Certificate file from below.
+First step is to get our root certificate. Please download the GPS Root Certificate file from below.
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
@@ -32,7 +32,7 @@ Please download the GPS Root Certificate file from below.
 **Advantages:**
 
 * Quickly done.
-* No need to import the GPS Root Certificate
+* No need to import the GPS Root Certificate.
 
 **Disadvantages:**
 
@@ -181,7 +181,7 @@ Click on "**Import**"
 * Click on "**Browse**" to specify the file you want to import.
 
   ![](/2020-08-25-15_21_16-certificate-import-wizard.jpg)
-* Select the Certificate file from your system and click on "**Open**".
+* Select the GPS Root Certificate file from your system and click on "**Open**".
 
   ![](/2020-08-25-15_21_38-open.jpg)
 * Click on "**Next**".
@@ -209,7 +209,7 @@ The Icon below shows that the Certificate is imported.
 
 ##### Step 1 :
 
-* Select the Certificate **(.crt file)** from your system.
+* Open the GPS Root Certificate from your system.
 
   ![](/2020-08-25-15_24_30-os-c_.jpg)
 * A Security Warning message will be appeared. Click on "**Open**"
@@ -258,7 +258,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 ##### Step 8 :
 
 * Click on "**Finish**" to complete the installation process for Certificate.
-* Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
+* Confirm the Security Warning message of the Installation by clicking on "**Yes**" and then click "**Ok**".
 
   ![](/2020-08-25-15_26_33-security-warning.jpg)
 
@@ -305,7 +305,7 @@ Click on "**Import**"
 * Click on "**Browse**" to specify the file you want to import.
 
   ![](/2020-08-25-15_05_07-certificate-import-wizard.jpg)
-* Select the Certificate **(.crt file)** from your system and click on "**Open**".
+* Select the GPS Root Certificate file from your system and click on "**Open**".
 
   ![](/2020-08-25-15_09_22-open.jpg)
 * Click on "**Next**".
@@ -361,7 +361,7 @@ To Import the Certificate file:
 * Click on the option "**Import**".
 
   ![](/2020-08-25-15_39_53-options.jpg)
-* Now select the Certificate **(.crt file)** you want to import from your system and click on "**Open**"
+* Select the GPS Root Certificate file from your system and click on "**Open**"
 
   ![](/2020-08-25-15_40_06-select-file-containing-ca-certificate-s-to-import.jpg)
 
