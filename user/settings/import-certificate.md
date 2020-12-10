@@ -133,7 +133,7 @@ There are three methods to import the GPS Root Certificate on the Operating Syst
 **Disadvantages:**
 
 * Lots of steps.
-* You must get the root certificate on a separate way.
+* Download of the GPS Root Certificate is required.
 
 ### → Via Chrome browser
 
