@@ -331,7 +331,7 @@ The Icon below shows that the Certificate is imported.
 
 ### Import in Browser (Firefox only)
 
-To Import an additional root-certificate to the Firefox browser, please follow the below steps:
+To Import the GPS Root Certificate in Firefox browser, please follow the below steps:
 
 ##### Step 1 :
 
@@ -344,26 +344,26 @@ Click on "**Options**" in Firefox browser menu.
 * Click on "**Privacy & Security**" option.
 
   ![](/2020-08-25-15_39_11-options.jpg)
-* After selecting the appropriate options, click on "**View Certificates.**."
+* Click on "**View Certificates.**."
 
   ![](/2020-08-25-15_39_26-options.jpg)
 
 ##### Step 3 :
 
-To Import the certificate file:
+To Import the Certificate file:
 
 * After clicking on the "View Certificate", the Certificate Manager page will be opened.
 * Select the "**Authorities**" panel.
-* Then click on "**Import**" option given below.
+* Click on the option "**Import**".
 
   ![](/2020-08-25-15_39_53-options.jpg)
-* Now select the .crt file you want to import from your system and click on "**Open**"
+* Now select the Certificate **(.crt file)** you want to import from your system and click on "**Open**"
 
   ![](/2020-08-25-15_40_06-select-file-containing-ca-certificate-s-to-import.jpg)
 
 ##### Step 4 :
 
-Set the purpose for the certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
+Set the purpose for the Certificate by selecting the option "**Trust this CA to identify websites**." and then click "**OK**"
 
 ![](/2020-08-25-15_40_38-downloading-certificate.jpg)
 
