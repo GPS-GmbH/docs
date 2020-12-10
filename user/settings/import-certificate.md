@@ -62,7 +62,7 @@ Click on "**Accept the Risk and Continue**"
 
 ##### Result
 
-The Icon below shows that the certificate is imported.
+The Icon below shows that the Certificate is imported.
 
 ![](/2020-08-25-14_53_56-sicon-os.jpg)
 
@@ -72,8 +72,8 @@ Please follow the below steps to add an exception in Chrome browser.
 
 ##### Step 1 :
 
-* In Chrome browser open your SICON.OS website.
-* On page load, Click on the option "**Advanced**".
+* Open the SICON.OS website.
+* Click on the option "**Advanced**".
 
 ![](/2020-08-25-14_47_35-privacy-error.jpg)
 
