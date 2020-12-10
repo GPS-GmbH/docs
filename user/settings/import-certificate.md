@@ -32,15 +32,15 @@ Please download the GPS Root Certificate file from below.
 **Advantages:**
 
 * Quickly done.
-* No need to import the GPS root certificate
+* No need to import the GPS Root Certificate
 
 **Disadvantages:**
 
-* The system/browser is trusting the certificate on an exception base only. (Icon does not turn green.)
+* The System/browser is trusting the Certificate on an exception base only. (Icon does not turn green.)
 
   ![](/exception_sicon-os.jpg)
 * It must be done for all browsers separately.
-* Exceptions must be added for each installation (SICON.HW, SICON.VM,...).
+* Exceptions must be added for each installation (SICON.HW, SICON.VM,...)
 * Edge browser needs the confirmation of the exception for every session.
 
 ### → Exception in FireFox
@@ -49,8 +49,8 @@ Please follow the below steps to add an exception in Firefox browser.
 
 ##### Step 1 :
 
-* In Firefox browser, Open your SICON.OS website.
-* On page load, Click on the option "**Advanced.**
+* Open the SICON.OS website.
+* Click on the option "**Advanced.**
 
 ![](/2020-08-25-14_53_11-warning_-potential-security-risk-ahead.jpg)
 
