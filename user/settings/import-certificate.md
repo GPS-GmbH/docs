@@ -268,25 +268,25 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 1 :
 
-Open your Edge browser system and click to open the "**Settings**".
+Open "**Settings**" in Edge browser system.
 
 ![](/2020-08-25-15_01_28-settings.jpg)
 
 ##### Step 2 :
 
-Click to open "**Privacy and security"**
+Open "**Privacy and security"**
 
 ![](/2020-08-25-15_01_54-settings-profile-1-microsoft-edge.jpg)
 
 ##### Step 3:
 
-Then click on "**Manage certificates**"
+Click on "**Manage certificates**"
 
 ![](/2020-08-25-15_01_54-settings-manage-certificates.jpg)
 
 ##### Step 4 :
 
-Click on the "**Trusted Root Certification"**.
+Select the "**Trusted Root Certification"**.
 
 ![](/2020-08-25-15_02_15-certificates.jpg)
 
@@ -298,23 +298,23 @@ Click on "**Import**"
 
 ##### Step 6 :
 
-* Now the Certificate Import Wizard will get open. Click on "**Next**" to continue.
+* The Certificate Import Wizard will get open. Click on "**Next**" to continue.
 
 ![](/2020-08-25-15_05_00-certificate-import-wizard.jpg)
 
 * Click on "**Browse**" to specify the file you want to import.
 
   ![](/2020-08-25-15_05_07-certificate-import-wizard.jpg)
-* Select the Certificate file (.crt) from your system and click on "**Open**".
+* Select the Certificate **(.crt file)** from your system and click on "**Open**".
 
   ![](/2020-08-25-15_09_22-open.jpg)
-* After selecting the .crt file, click on "**Next**".
+* Click on "**Next**".
 
   ![](/2020-08-25-15_09_28-certificate-import-wizard.jpg)
 * Confirm the store by selecting "Place all certificates in the following store" and then click on "**Next**"
 
   ![](/2020-08-25-15_09_32-certificate-import-wizard.jpg)
-* Click on "**Finish**" to complete the installation process of certificate Import.
+* Click on "**Finish**" to complete the installation process of Certificate Import.
 
   ![](/2020-08-25-15_09_36-certificate-import-wizard.jpg)
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
@@ -325,7 +325,7 @@ Click on "**Import**"
 
 ##### Result
 
-The Icon below shows that the certificate is imported.
+The Icon below shows that the Certificate is imported.
 
 ![](/2020-08-25-15_11_02-sicon-os-profile-1-microsoft-edge.jpg)
 
