@@ -9,9 +9,9 @@ Web browsers use Secure Sockets Layer (SSL) or Transport Layer Security (TLS), t
 
 These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows 10, Apple's OSX, Android, iOS, ....) or in the Certificate management of the browser, like Firefox.
 
-As the local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the Web page of such a device via https, this leads to the warning dialogs of the browser.
+As the local area devices are not reachable by a global URL or URN - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the Web page of such a device via https, this leads to the warning dialog of the browser.
 
-There are three options, to get around this warning dialogue:
+There are three options, to get around this warning dialog:
 
 1. Add an exception in your browser (Firefox, Chrome and Edge browser).
 2. Import the GPS Root Certificate in your OS via the trust centre of the Operating System or via specific Web browsers.
