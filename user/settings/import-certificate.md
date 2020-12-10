@@ -209,7 +209,7 @@ The Icon below shows that the Certificate is imported.
 
 ##### Step 1 :
 
-* Select the **.crt file** from your system.
+* Select the Certificate **(.crt file)** from your system.
 
   ![](/2020-08-25-15_24_30-os-c_.jpg)
 * A Security Warning message will be appeared. Click on "**Open**"
@@ -224,7 +224,7 @@ To start install procedure, click on "**Install Certificate..**"
 
 ##### Step 3 :
 
-* Now the Certificate Import Wizard will get open.
+* The Certificate Import Wizard will get open.
 * Select the Store Location, by click on "Current User"
 
   ![](/2020-08-25-15_24_50-certificate-import-wizard.jpg)
@@ -245,7 +245,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 6 :
 
-Select the correct store (aka category) for the certificate: "**Trusted Root Certification Authorities"** and then click on "**OK**"
+Select the correct store (aka category) for the Certificate: "**Trusted Root Certification Authorities"** and then click on "**OK**"
 
 ![](/2020-08-25-15_26_22-select-certificate-store.jpg)
 
@@ -257,7 +257,7 @@ Confirm the store by selecting "Place all certificates in the following store" a
 
 ##### Step 8 :
 
-* Click on "**Finish**" to complete the installation process for certificate.
+* Click on "**Finish**" to complete the installation process for Certificate.
 * Confirm the Security Warning message of the Installation by click on "**Yes**" and then click "**Ok**".
 
   ![](/2020-08-25-15_26_33-security-warning.jpg)
