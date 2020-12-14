@@ -9,7 +9,7 @@ Web browsers use Secure Sockets Layer ([SSL](https://en.wikipedia.org/wiki/Trans
 
 These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows OS, Apple's OSX, Android, iOS, iPadOS....) or in the Certificate management of the browser, like Firefox.
 
-As the local area network devices are not reachable by a global [URL](https://en.wikipedia.org/wiki/URL "URL") or [URN](https://en.wikipedia.org/wiki/Uniform_Resource_Name "URN") - like google.com, there is no chance to anchor trust in the Certificates of these devices. When the customer tries to load the Web page of such a device via https, this leads to the warning dialog of the browser.
+As local area network devices like the SICON.HW P10 are usually not reachable by a static IP or a fixed [URL](https://en.wikipedia.org/wiki/URL "URL"), certificates cannot be generated beforehand, but must be generated during runtime. So there is no chance of having these certificates being issued by a CA, that is already in the certificate management of the operating system or browser. When the customer tries to load the Web page of such a device via https, this leads to the warning dialog of the browser.
 
 There are three options, to get around this warning dialog:
 
@@ -23,7 +23,7 @@ First step is to get our root certificate. Please download the GPS Root Certific
 
 #### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
 
-&nbsp;
+ 
 
 ## Windows OS
 
