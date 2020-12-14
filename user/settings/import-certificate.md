@@ -5,7 +5,7 @@ actionLink: https://app-store-api.exa.sicon.io/uploads/gps_ca.crt
 ---
 # Import Certificate
 
-Web browsers use Secure Sockets Layer ([SSL](https://en.wikipedia.org/wiki/Transport_Layer_Security)) or Transport Layer Security ([TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)), to encrypt traffic between Client Systems and Server Computers to protect the confidential data or to prove the web page's authenticity. The entity that issue the Certificate is known as \`Certificate Authority´(CA) and the Certificate must also be trusted by the web browser, which involves installing the issuer Certificate so the browser knows that issuer is valid and reliable.
+Web browsers use Transport Layer Security ([TLS](https://en.wikipedia.org/wiki/Transport_Layer_Security)), to encrypt traffic between Client Systems and Server Computers to protect the confidential data or to prove the web page's authenticity. The entity that issue the Certificate is known as \`Certificate Authority´(CA) and the Certificate must also be trusted by the web browser, which involves installing the issuer Certificate so the browser knows that issuer is valid and reliable.
 
 These issued Certificates are included in the trust centres of Operating Systems (Microsoft Windows OS, Apple's OSX, Android, iOS, iPadOS....) or in the Certificate management of the browser, like Firefox.
 
