@@ -35,7 +35,7 @@ Click on "**Get Started**"
 
 ### Step 1 : Accept Terms & Conditions
 
-* Read carefully the Terms & Conditions for the Software installation
+* Carefully read the Terms & Conditions for the Software installation
 * Check-on the option to accept the "**Terms stated above**"
 * Then click on "**Next**" to continue.
 
