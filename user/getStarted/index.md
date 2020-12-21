@@ -25,7 +25,7 @@ SICON.OS is getting ready for installation
 
 ![](/getting-ready.png)
 
-## Install SICON.OS 
+## Install SICON.OS
 
 Please follow the below steps to configure your SICON.OS
 
@@ -56,7 +56,7 @@ Click on "**Get Started**"
 ### Step 2.2: Account Sign Up
 
 * Fill the option given in the Sign-up form like your E-mail address, Password, Personal Information and Address.
-* Then click on "**Sign-up**". 
+* Then click on "**Sign-up**".
 
 ![](/sign-up-page.jpg)
 
@@ -66,7 +66,7 @@ Click on "**Get Started**"
 
 ![](/confirm-email.jpg)
 
-* You will recieve an email of confimation on your email account, click on "**Confirm Email**"
+* You will receive an email of confirmation on your email account, click on "**Confirm Email**"
 
   ![](/confirm-email-1.jpg)
 * Your account get successfully created.
@@ -79,7 +79,7 @@ Click on "**Get Started**"
 
 ![](/get-a-free-license.jpg)
 
-* You will get the current License details for your device 
+* You will get the current License details for your device
 * Click on "**Next**" to proceed further.
 
 ![](/get-a-free-license-next.jpg)
