@@ -21,9 +21,10 @@ There are three options, to get around this warning dialog:
 
 First step is to get our root certificate. Please download the GPS Root Certificate file from below.
 
-#### [Download Certificate](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Root Certificate")
+#### Download Certificate
 
- 
+* For Windows, MacOS, Linux [Download](https://app-store-api.exa.sicon.io/uploads/gps_ca.pem "Download Certificate")
+* For Android [Download](https://app-store-api.exa.sicon.io/uploads/gps_ca.crt "Download Certificate")
 
 ## Windows OS
 
