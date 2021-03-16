@@ -4,7 +4,7 @@
         "version": "1.0.0",
         "description": "This API provides access to the gateway database and its adapters, devices and spawned errors."
     },
-    "host": "10.8.0.10",
+    "host": "master.gps.cloud.sicon.io",
     "basePath": "/api/v1",
     "schemes": [
         "https"
@@ -16,7 +16,351 @@
     },
     "swagger": "2.0",
     "paths": {
-        "/device-image/{filename}": {
+        "/app-catalog": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "appCatalog"
+                ],
+                "description": "Serves a list of apps from the catalog",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/apps": {
+            "get": {
+                "tags": [
+                    "app"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Serves a list of installed apps plus the default one",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Triggers the installation of a new app",
+                "tags": [
+                    "app"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/apps/{AppID}": {
+            "get": {
+                "tags": [
+                    "app"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Serves details to the specified app",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "App not found"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "app"
+                ],
+                "description": "Updates app data",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppID"
+                    },
+                    {
+                        "$ref": "#/parameters/AppName"
+                    },
+                    {
+                        "$ref": "#/parameters/AppDockerImage"
+                    },
+                    {
+                        "$ref": "#/parameters/AppMaxInstances"
+                    },
+                    {
+                        "$ref": "#/parameters/AppRunType"
+                    },
+                    {
+                        "$ref": "#/parameters/AppSystem"
+                    },
+                    {
+                        "$ref": "#/parameters/AppListed"
+                    },
+                    {
+                        "$ref": "#/parameters/AppEnabled"
+                    },
+                    {
+                        "$ref": "#/parameters/AppContainerName"
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "App not found"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppID"
+                    }
+                ],
+                "tags": [
+                    "app"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "204": {
+                        "description": "No content"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "App not found"
+                    }
+                }
+            }
+        },
+        "/apps/{AppID}/update": {
+            "get": {
+                "tags": [
+                    "app"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Serves the status of the update",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "App not found"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "app"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "updates the app - in case of `backend` the whole system",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "App not found"
+                    }
+                }
+            }
+        },
+        "/certificate": {
+            "get": {
+                "tags": [
+                    "certificate"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Serves the common fields of the installed x509 certificate",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Uploads a new certificate. Checks are made regarding the validity and if the common name matches the hostname derived domain name",
+                "tags": [
+                    "certificate"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    },
+                    "500": {
+                        "description": "Internal server error"
+                    }
+                }
+            }
+        },
+        "/device-class/ioddless": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "deviceClass"
+                ],
+                "description": "Serves a list of DeviceClasses that are not populated with a iodd yet",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/device-class/device-files": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "deviceClass"
+                ],
+                "description": "Serves a list of device files, that are installed. Parameters are VendorID, VendorName, DeviceID, ProductName, Filename, Filetype",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/device-image/{Filename}": {
             "get": {
                 "tags": [
                     "device"
@@ -33,6 +377,9 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device file not found"
                     }
                 }
             }
@@ -73,7 +420,322 @@
                 }
             }
         },
-        "/devices/{id}/data/{group}": {
+        "/devices/{ID}/reporting-export": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves a csv file containing the reporting data of the given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "text/csv"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/events-export": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves  a csv file containing the events of the given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "text/csv"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/event-groups": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves a list of event groups for the given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/event-group-data/aggregated": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves the aggregate values of the event group data for the given device as defined in the event group",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/event-group-data/trends": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves the trends of the event group data for the given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/event-group-data/history": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves all values of the event group data for the given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/missing-device-description-files": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves a list of objects of device parameters (VendorID, VendorName, DeviceID,  ProductName), whose DeviceInstance is lacking a device description file, like an iodd or an sdd, needed for successful registration",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/counter": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves the reporting, replay and event count over all devices",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/devices/connectivity": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves the number of connected and disconnected devices and the maximum number of devices, that can be registered.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Get device specific information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "device"
+                ],
+                "description": "Update device",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "device"
+                ],
+                "description": "Devices/:ID",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/update-available": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "check if there is a device description file update available for the given device.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/update": {
+            "post": {
+                "tags": [
+                    "device"
+                ],
+                "description": "updates the device description file of the given device.",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/data": {
             "get": {
                 "tags": [
                     "device"
@@ -114,16 +776,67 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
                     }
                 }
             }
         },
-        "/devices/{id}/epc-config": {
+        "/devices/{ID}/data/{Group}": {
             "get": {
                 "tags": [
                     "device"
                 ],
-                "description": "Get device EPC Config",
+                "description": "Get device ISDU information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    },
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/DataGroup"
+                    },
+                    {
+                        "$ref": "#/parameters/Grouping"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/events/type-count": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves the number of occurred event types of a given device",
                 "parameters": [
                     {
                         "$ref": "#/parameters/ID"
@@ -135,47 +848,113 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
                     }
                 }
             }
         },
-        "/devices/{id}/epc": {
+        "/devices/{ID}/events/code-count": {
             "get": {
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    },
-                    {
-                        "$ref": "#/parameters/EPCRangeStart"
-                    },
-                    {
-                        "$ref": "#/parameters/EPCRangeEnd"
-                    },
-                    {
-                        "$ref": "#/parameters/EPCProperties"
-                    },
-                    {
-                        "$ref": "#/parameters/EPCSamples"
-                    },
-                    {
-                        "$ref": "#/parameters/EPCSource"
-                    }
-                ],
                 "tags": [
                     "device"
                 ],
-                "description": "XXXX",
+                "description": "Serves the number of occurred event codes of a given device",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
                 "produces": [
                     "application/json"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
                     }
                 }
             }
         },
-        "/devices/{id}/parameter/{index}": {
+        "/devices/{ID}/reporting": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves device Reporting Data",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/reporting-config": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves device Reporting Config",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/heatmap": {
+            "get": {
+                "tags": [
+                    "device"
+                ],
+                "description": "Serves device heatmap",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/devices/{ID}/parameters/{Index}": {
             "post": {
                 "tags": [
                     "device"
@@ -188,7 +967,15 @@
                     {
                         "$ref": "#/parameters/Index"
                     }
-                ]
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
             },
             "put": {
                 "tags": [
@@ -202,7 +989,15 @@
                     {
                         "$ref": "#/parameters/Index"
                     }
-                ]
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
             }
         },
         "/events": {
@@ -241,7 +1036,43 @@
                 }
             }
         },
-        "/events/{id}": {
+        "/event-classes": {
+            "get": {
+                "tags": [
+                    "event"
+                ],
+                "description": "Serves a list of event classes",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/responses/OK"
+                    }
+                }
+            }
+        },
+        "/events/{ID}": {
             "get": {
                 "tags": [
                     "event"
@@ -258,16 +1089,55 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Event not found"
                     }
                 }
             }
         },
-        "/guidds/{id}": {
+        "/events-resolved": {
             "get": {
                 "tags": [
-                    "guidd"
+                    "event"
                 ],
-                "description": "Get the JSON contents of a guidd",
+                "description": "Serves a list of events with resolved x labels",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/responses/OK"
+                    }
+                }
+            }
+        },
+        "/events-resolved/{ID}": {
+            "get": {
+                "tags": [
+                    "event"
+                ],
+                "description": "Get a single event with resolved x labels",
                 "parameters": [
                     {
                         "$ref": "#/parameters/ID"
@@ -279,16 +1149,86 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    },
+                    "404": {
+                        "description": "Event not found"
                     }
                 }
             }
         },
-        "/hardware": {
+        "/file-import/network-location": {
+            "post": {
+                "tags": [
+                    "deviceFile"
+                ],
+                "description": "Imports a new or updated device file, like a device description file, a firmware file, a document or an image file",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Filename"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/responses/OK"
+                    },
+                    "400": {
+                        "description": "Unsupported file type"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/file-import/client-system": {
+            "post": {
+                "tags": [
+                    "deviceFile"
+                ],
+                "description": "Uploads a new or updated device file, like a device description file, a firmware file, a document or an image file",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Filename"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "$ref": "#/responses/OK"
+                    },
+                    "400": {
+                        "description": "file is missing"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    }
+                }
+            }
+        },
+        "/floorplans": {
             "get": {
                 "tags": [
-                    "hardware"
+                    "floorplan"
                 ],
-                "description": "Hardware",
+                "description": "Serves a list of floorplans",
                 "parameters": [
                     {
                         "$ref": "#/parameters/Limit"
@@ -315,6 +1255,1662 @@
                 "responses": {
                     "200": {
                         "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "floorplan"
+                ],
+                "description": "uploads a new floorplan",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Name"
+                    },
+                    {
+                        "$ref": "#/parameters/File"
+                    }
+                ]
+            }
+        },
+        "/floorplans/{ID}": {
+            "parameters": [
+                {
+                    "$ref": "#/parameters/ID"
+                }
+            ],
+            "get": {
+                "tags": [
+                    "floorplan"
+                ],
+                "description": "Get floorplan",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "floorplan"
+                ],
+                "description": "Update floorplan",
+                "consumes": [
+                    "application/json",
+                    "multipart/formdata"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "floorplan"
+                ],
+                "description": "FloorPlans/:ID",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "404": {
+                        "description": "Floorplan not found"
+                    }
+                }
+            }
+        },
+        "/guidds/{ID}": {
+            "get": {
+                "tags": [
+                    "guidd"
+                ],
+                "description": "Get the JSON contents of a guidd",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/hardware": {
+            "get": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Serves a list with all devices with all attributes",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Imports devices files or archives",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Filename"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Removes unregistered devices or sets them to preregistered.",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/hardware/{ID}": {
+            "get": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Serves the specified device with all attributes",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Updates properties of a device or uploads firmware file and applies it to the device",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "consumes": [
+                    "application/json",
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            },
+            "del": {
+                "tags": [
+                    "hardware"
+                ],
+                "description": "Removes a specified device",
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Device not found"
+                    }
+                }
+            }
+        },
+        "/main-device-classes": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDeviceClasses"
+                ],
+                "description": "Serves all MainDeviceClasses",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/main-device-catalog": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDeviceClasses"
+                ],
+                "description": "Serves the catalog part of MainDeviceClasses",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Bad request"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/main-devices": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "Serves a list of mainDevices",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": null
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "/MainDevices",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "multipart/form-data"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Created"
+                    },
+                    "400": {
+                        "description": "Bad Request"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    }
+                },
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/DeviceClassID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAssetID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceCatalogName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceConfigurationFile"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceConfigurationFileRequired"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicedefaultExtraInfos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDescription"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDevID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceDescriptionAvailable"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceDescriptionIconFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceSubType"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceType"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDocumentNames"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceextraInfos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceFloorPlanID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceGuiDD_ID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceIconFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceIPAddress"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceisSelfRegistering"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceLocationPos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceLocationTag"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceMAC"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceMqttProtocol"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePDbitLengthIn"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePDbitLengthOut"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePictureFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePort"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceProductCategory"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceProductID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterIsIntern"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterRevision"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSSL_TLS_Available"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicestandardPort"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicestartDevices"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceStopOnProblems"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSubinterfaces"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceusesSSL_TLS"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceVendorID"
+                    }
+                ]
+            }
+        },
+        "/main-devices/scan/status": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "Returns whether the pre-reg scanner is currently running",
+                "produces": [
+                    "application/string"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/main-devices/{ID}": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "Get mainDevice specific information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "MainDevice not found"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "Updates properties of a specific mainDevice or uploads config files for mainDevice",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    },
+                    {
+                        "$ref": "#/parameters/DeviceClassID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAssetID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceCatalogName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceConfigurationFile"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceConfigurationFileRequired"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicedefaultExtraInfos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDescription"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDevID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceDescriptionAvailable"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceDescriptionIconFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceSubType"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDeviceType"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceDocumentNames"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceextraInfos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceFloorPlanID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceGuiDD_ID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceIconFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceIPAddress"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceisSelfRegistering"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceLocationPos"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceLocationTag"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceMAC"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceMqttProtocol"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePDbitLengthIn"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePDbitLengthOut"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePictureFileName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicePort"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceProductCategory"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceProductID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterIsIntern"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterName"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSoftwareAdapterRevision"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSSL_TLS_Available"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicestandardPort"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDevicestartDevices"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceStopOnProblems"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceSubinterfaces"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceusesSSL_TLS"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceVendorID"
+                    },
+                    {
+                        "$ref": "#/parameters/Filename"
+                    }
+                ],
+                "consumes": [
+                    "application/json",
+                    "multipart/form-data"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "no files sent"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "MainDevice not found"
+                    },
+                    "415": {
+                        "description": "Unsupported media type"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "MainDevices/:ID",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "MainDevice not found"
+                    }
+                }
+            }
+        },
+        "/privileges": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "privilege"
+                ],
+                "description": "Serves a list of Privilege",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Limit"
+                    },
+                    {
+                        "$ref": "#/parameters/Offset"
+                    },
+                    {
+                        "$ref": "#/parameters/Properties"
+                    },
+                    {
+                        "$ref": "#/parameters/Filter"
+                    },
+                    {
+                        "$ref": "#/parameters/Group"
+                    },
+                    {
+                        "$ref": "#/parameters/Count"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/privileges/{ID}": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "privilege"
+                ],
+                "description": "Get Privilege specific information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/reporting": {
+            "get": {
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Devices"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingRangeStart"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingRangeEnd"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingProperties"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingSamples"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingSource"
+                    }
+                ],
+                "tags": [
+                    "reporting"
+                ],
+                "description": "Serves all reporting data",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "400": {
+                        "description": "Missing parameter `devices`"
+                    }
+                }
+            }
+        },
+        "/roles": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "role"
+                ],
+                "description": "Serves a list of Role",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "role"
+                ],
+                "description": "Adds a new Role",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/RoleName"
+                    },
+                    {
+                        "$ref": "#/parameters/RoleSystem"
+                    },
+                    {
+                        "$ref": "#/parameters/Description"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/roles/{ID}": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "role"
+                ],
+                "description": "Get Role specific information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "role"
+                ],
+                "description": "Update Role",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    },
+                    {
+                        "$ref": "#/parameters/RoleName"
+                    },
+                    {
+                        "$ref": "#/parameters/RoleSystem"
+                    },
+                    {
+                        "$ref": "#/parameters/Description"
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "tags": [
+                    "role"
+                ],
+                "description": "roles/:ID",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "Not found"
+                    }
+                }
+            }
+        },
+        "/application-data/{AppLabel}": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Serves application data by Label",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/AppLabel"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/node": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Returns the Server identification information",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "description": "Returns the Server configuration",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "server_"
+                ],
+                "description": "Updates the server configufration",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "server",
+                        "in": "body",
+                        "description": "Server object that overwrites the existing IPs, ports, WLAN Settings and access",
+                        "required": true,
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Modified"
+                    },
+                    "400": {
+                        "description": "Some of the fields fail validation"
+                    }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
+            }
+        },
+        "/server/ping": {
+            "get": {
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/IPAddress"
+                    },
+                    {
+                        "$ref": "#/parameters/Timeout"
+                    }
+                ],
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "ping an OT or IT device connected to the sicon box",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/status": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "get overall server status",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/reboot": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "reboot server",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/shutdown": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "shutdown server",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/connectivity/finder": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "checks if sdd and iodd finder can be reached",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/connectivity": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "checks if iodd finder, app store and registry can be reached",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/service-status": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Status of the LEDs and LAN services",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/scan": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Scan for IPs on the interfaces of the hardware",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/information": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "description": "Get hardware data - CPU, memory, etc",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/timezones": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "description": "Serves a list of timezones",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/server/timezone": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "description": "Serves the installation`s timezone",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "server_"
+                ],
+                "description": "Sets the installation`s timezones",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Location"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/server/static-data": {
+            "get": {
+                "tags": [
+                    "server_"
+                ],
+                "description": "Serves the installation`s static data",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/uiconfig": {
+            "get": {
+                "tags": [
+                    "uiconfig"
+                ],
+                "description": "Serves the user interface configuration",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "uiconfig"
+                ],
+                "description": "Updates user interface configuration",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ConfigurationFile"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/users": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "user"
+                ],
+                "description": "Serves a list of User",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            },
+            "post": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "user"
+                ],
+                "description": "Adds a new user",
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    }
+                }
+            }
+        },
+        "/users/{ID}": {
+            "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "user"
+                ],
+                "description": "Get User specific information",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            },
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "tags": [
+                    "user"
+                ],
+                "description": "Update User",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "User not found"
+                    }
+                }
+            },
+            "delete": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    }
+                ],
+                "tags": [
+                    "user"
+                ],
+                "description": "Deletes user",
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    },
+                    "401": {
+                        "description": "Authorization failed"
+                    },
+                    "404": {
+                        "description": "User not found"
                     }
                 }
             }
@@ -352,7 +2948,102 @@
                 }
             }
         },
-        "/version/{tag}": {}
+        "/version/{Vendor}/{App}": {
+            "get": {
+                "tags": [
+                    "version"
+                ],
+                "description": "Get a changelog of all versions (git tags)",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Vendor"
+                    },
+                    {
+                        "$ref": "#/parameters/App"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/version/{Vendor}/{App}/installed": {
+            "get": {
+                "tags": [
+                    "version"
+                ],
+                "description": "Get currently installed version",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Vendor"
+                    },
+                    {
+                        "$ref": "#/parameters/App"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/version/{Vendor}/{App}/latest": {
+            "get": {
+                "tags": [
+                    "version"
+                ],
+                "description": "Get latest (on build server) installed version",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Vendor"
+                    },
+                    {
+                        "$ref": "#/parameters/App"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        },
+        "/version/{Vendor}/{App}/channels": {
+            "get": {
+                "tags": [
+                    "version"
+                ],
+                "description": "Get a specific version from upstream build server",
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/Vendor"
+                    },
+                    {
+                        "$ref": "#/parameters/App"
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
+                    }
+                }
+            }
+        }
     },
     "definitions": {
         "ID": {
@@ -382,7 +3073,7 @@
                 "AllowCommands": {
                     "type": "boolean"
                 },
-                "AllowEPC": {
+                "AllowReporting": {
                     "type": "boolean"
                 },
                 "AllowEvent": {
@@ -453,7 +3144,7 @@
                 "AllowCommands": {
                     "type": "boolean"
                 },
-                "AllowEPC": {
+                "AllowReporting": {
                     "type": "boolean"
                 },
                 "AllowEvent": {
@@ -509,6 +3200,71 @@
                 }
             }
         },
+        "App": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "dockerImage": {
+                    "type": "string"
+                },
+                "integration": {
+                    "type": "object"
+                },
+                "runSettings": {
+                    "type": "object"
+                },
+                "price": {
+                    "type": "integer"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "allowedSerials": {
+                    "type": "object"
+                },
+                "public": {
+                    "type": "boolean"
+                },
+                "maxInstances": {
+                    "type": "integer"
+                },
+                "runType": {
+                    "type": "string"
+                },
+                "system": {
+                    "type": "string"
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "updated_at": {
+                    "type": "string"
+                },
+                "pictures": {
+                    "type": "object"
+                },
+                "listed": {
+                    "type": "boolean"
+                },
+                "enabled": {
+                    "type": "boolean"
+                },
+                "containerName": {
+                    "type": "string"
+                },
+                "loading": {
+                    "type": "boolean"
+                },
+                "url": {
+                    "type": "string"
+                }
+            }
+        },
         "Device": {
             "type": "object",
             "properties": {
@@ -529,9 +3285,6 @@
                 },
                 "GUIDD": {
                     "type": "string"
-                },
-                "CommunicationInterfaceID": {
-                    "type": "integer"
                 },
                 "VendorID": {
                     "type": "integer"
@@ -744,11 +3497,11 @@
             "required": false,
             "name": "AllowCommands"
         },
-        "MainDeviceAllowEPC": {
+        "MainDeviceAllowReporting": {
             "in": "formData",
             "type": "boolean",
             "required": false,
-            "name": "AllowEPC"
+            "name": "AllowReporting"
         },
         "MainDeviceAllowEvent": {
             "in": "formData",
@@ -876,6 +3629,54 @@
             "type": "string",
             "in": "query"
         },
+        "AppName": {
+            "in": "formData",
+            "type": "string",
+            "required": false,
+            "name": "name"
+        },
+        "AppDockerImage": {
+            "in": "formData",
+            "type": "string",
+            "required": false,
+            "name": "dockerImage"
+        },
+        "AppMaxInstances": {
+            "in": "formData",
+            "type": "integer",
+            "required": false,
+            "name": "maxInstances"
+        },
+        "AppRunType": {
+            "in": "formData",
+            "type": "string",
+            "required": false,
+            "name": "runType"
+        },
+        "AppSystem": {
+            "in": "formData",
+            "type": "string",
+            "required": false,
+            "name": "system"
+        },
+        "AppListed": {
+            "in": "formData",
+            "type": "boolean",
+            "required": false,
+            "name": "listed"
+        },
+        "AppEnabled": {
+            "in": "formData",
+            "type": "boolean",
+            "required": false,
+            "name": "enabled"
+        },
+        "AppContainerName": {
+            "in": "formData",
+            "type": "string",
+            "required": false,
+            "name": "containerName"
+        },
         "MainDeviceColumn": {
             "name": "Column",
             "in": "path",
@@ -983,6 +3784,13 @@
             "required": true,
             "type": "integer"
         },
+        "AppID": {
+            "name": "AppID",
+            "description": "A unique ID to identify an app",
+            "in": "path",
+            "required": true,
+            "type": "string"
+        },
         "Index": {
             "name": "index",
             "description": "Device Parameter Index",
@@ -1000,17 +3808,14 @@
         "DataGroup": {
             "name": "Group",
             "in": "path",
-            "description": "might have the following values according to the name of the tables in the databases:\n* **DeviceControl**\n* **ISDU_Identification**\n* **ISDU_Parameter**\n* **ISDU_Observation**\n* **ISDU_Diagnosis**\n* **ProcessData**\n* **EPC**\n",
+            "description": "might have the following values according to the name of the tables in the databases:\n* **DeviceControl**\n* **ISDU**\n* **ProcessData**\n* **Reporting**\n",
             "required": true,
             "type": "string",
             "enum": [
                 "DeviceControl",
-                "ISDU_Identification",
-                "ISDU_Parameter",
-                "ISDU_Observation",
-                "ISDU_Diagnosis",
+                "ISDU",
                 "ProcessData",
-                "EPC"
+                "Reporting"
             ]
         },
         "InterfaceID": {
@@ -1087,13 +3892,6 @@
             "required": true,
             "type": "string"
         },
-        "CommunicationInterfaceID": {
-            "name": "CommunicationInterfaceID",
-            "in": "path",
-            "description": "CommunicationInterfaceID",
-            "required": true,
-            "type": "integer"
-        },
         "ShortName": {
             "name": "ShortName",
             "in": "path",
@@ -1139,7 +3937,7 @@
                 "Error",
                 "Warning",
                 "Notification",
-                "Message"
+                "Unknown"
             ]
         },
         "UniqueID": {
@@ -1156,19 +3954,19 @@
             "required": true,
             "type": "integer"
         },
-        "EPCRangeStart": {
+        "ReportingRangeStart": {
             "name": "rangeStart",
             "in": "query",
             "description": "Defines the start of the range to search for samples",
             "type": "integer"
         },
-        "EPCRangeEnd": {
+        "ReportingRangeEnd": {
             "name": "rangeEnd",
             "in": "query",
             "description": "Defines the end of the range to search for samples",
             "type": "integer"
         },
-        "EPCRangeType": {
+        "ReportingRangeType": {
             "name": "rangeType",
             "in": "query",
             "description": "Type of range to use with range",
@@ -1179,33 +3977,57 @@
                 "time"
             ]
         },
-        "EPCProperties": {
+        "ReportingProperties": {
             "name": "properties",
             "in": "query",
-            "description": "A list of properties to ask for. If empty, all properties will be returned\nThe list is comma separated. A list of properties can be retrieved via the EPCConfig Table (not exposed via API)\n",
+            "description": "A list of properties to ask for. If empty, all properties will be returned\nThe list is comma separated. A list of properties can be retrieved via the ReportingConfig Table (not exposed via API)\n",
             "type": "string"
         },
-        "EPCSamples": {
+        "ReportingSamples": {
             "name": "samples",
             "in": "query",
             "description": "Defines how many samples to return, evenly spreaded across the required `range`.\nThe default is `2`.\n",
             "type": "integer"
         },
-        "EPCSource": {
+        "ReportingSource": {
             "name": "source",
             "in": "query",
-            "description": "Define from which sources the epc data is aggregated from.\nBy default, all sources are used, but can be specified with a comma separated list.\n",
+            "description": "Define from which sources the reporting data is aggregated from.\nBy default, all sources are used, but can be specified with a comma separated list.\n",
             "type": "string"
         }
     },
     "tags": [
         {
+            "name": "appCatalog",
+            "description": "Apps downloadable from the exa cloud"
+        },
+        {
+            "name": "app",
+            "description": "An app is a container pulled from the service.sicon.eco cloud registry"
+        },
+        {
+            "name": "certificate",
+            "description": "the certificate is used to establish an end to end encrypted connection between the client and the backend"
+        },
+        {
+            "name": "deviceClass",
+            "description": "A deviceClass contains all device properties that are instance independent"
+        },
+        {
             "name": "device",
-            "description": "A device is an OT unit emitting ProcessData, Events and EPC Data"
+            "description": "A device is an OT unit emitting ProcessData, Events and Reporting Data"
         },
         {
             "name": "event",
             "description": "Events are spawned by devices and have code, timestamp and severity"
+        },
+        {
+            "name": "deviceFile",
+            "description": "a deviceFile specifies properties of a device that facilitates automated data processing"
+        },
+        {
+            "name": "floorplan",
+            "description": "A floor plan is an image to locate entitites upon via x and y coordinates relative to a refernece point in the left lower corner"
         },
         {
             "name": "guidd",
@@ -1214,6 +4036,46 @@
         {
             "name": "hardware",
             "description": "Subdevices and Maindevices merged in one view"
+        },
+        {
+            "name": "mainDeviceClasses",
+            "description": "mainDeviceClasses of available adapters"
+        },
+        {
+            "name": "mainDevice",
+            "description": "Main devices allow to access mounted devices"
+        },
+        {
+            "name": "privilege",
+            "description": "Privileges a singular permissions of access"
+        },
+        {
+            "name": "reporting",
+            "description": "Reporting data"
+        },
+        {
+            "name": "role",
+            "description": "A Role is entitled to a list of privileges"
+        },
+        {
+            "name": "server_",
+            "description": "Server"
+        },
+        {
+            "name": "uiconfig",
+            "description": "User Interface configuration"
+        },
+        {
+            "name": "user",
+            "description": "A user account can have multiple roles and inherit their privileges."
+        },
+        {
+            "name": "vendors",
+            "description": "Vendor information"
+        },
+        {
+            "name": "version",
+            "description": "Get version changelogs and single versions"
         }
     ]
 }
