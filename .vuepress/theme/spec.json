@@ -4,7 +4,7 @@
         "version": "1.0.0",
         "description": "This API provides access to the gateway database and its adapters, devices and spawned errors."
     },
-    "host": "master.gps.cloud.sicon.io",
+    "host": "siconos",
     "basePath": "/api/v1",
     "schemes": [
         "https"
@@ -262,58 +262,6 @@
                     },
                     "404": {
                         "description": "App not found"
-                    }
-                }
-            }
-        },
-        "/certificate": {
-            "get": {
-                "tags": [
-                    "certificate"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "description": "Serves the common fields of the installed x509 certificate",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            },
-            "put": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "description": "Uploads a new certificate. Checks are made regarding the validity and if the common name matches the hostname derived domain name",
-                "tags": [
-                    "certificate"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "400": {
-                        "description": "Bad request"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "415": {
-                        "description": "Unsupported media type"
-                    },
-                    "500": {
-                        "description": "Internal server error"
                     }
                 }
             }
@@ -697,7 +645,7 @@
                 }
             }
         },
-        "/devices/{ID}/update-available": {
+        "/devices/{id}/update-available": {
             "get": {
                 "tags": [
                     "device"
@@ -716,7 +664,7 @@
                 }
             }
         },
-        "/devices/{ID}/update": {
+        "/devices/{id}/update": {
             "post": {
                 "tags": [
                     "device"
@@ -735,7 +683,7 @@
                 }
             }
         },
-        "/devices/{ID}/data": {
+        "/devices/{id}/data": {
             "get": {
                 "tags": [
                     "device"
@@ -783,7 +731,7 @@
                 }
             }
         },
-        "/devices/{ID}/data/{Group}": {
+        "/devices/{id}/data/{group}": {
             "get": {
                 "tags": [
                     "device"
@@ -831,7 +779,7 @@
                 }
             }
         },
-        "/devices/{ID}/events/type-count": {
+        "/devices/{id}/events/type-count": {
             "get": {
                 "tags": [
                     "device"
@@ -855,7 +803,7 @@
                 }
             }
         },
-        "/devices/{ID}/events/code-count": {
+        "/devices/{id}/events/code-count": {
             "get": {
                 "tags": [
                     "device"
@@ -879,31 +827,43 @@
                 }
             }
         },
-        "/devices/{ID}/reporting": {
+        "/devices/{id}/reporting": {
             "get": {
-                "tags": [
-                    "device"
-                ],
-                "description": "Serves device Reporting Data",
                 "parameters": [
                     {
                         "$ref": "#/parameters/ID"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingRangeStart"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingRangeEnd"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingProperties"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingSamples"
+                    },
+                    {
+                        "$ref": "#/parameters/ReportingSource"
                     }
                 ],
+                "tags": [
+                    "device"
+                ],
+                "description": "XXXX",
                 "produces": [
                     "application/json"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "404": {
-                        "description": "Device not found"
                     }
                 }
             }
         },
-        "/devices/{ID}/reporting-config": {
+        "/devices/{id}/reporting-config": {
             "get": {
                 "tags": [
                     "device"
@@ -954,7 +914,7 @@
                 }
             }
         },
-        "/devices/{ID}/parameters/{Index}": {
+        "/devices/{id}/parameters/{index}": {
             "post": {
                 "tags": [
                     "device"
@@ -1039,7 +999,7 @@
         "/event-classes": {
             "get": {
                 "tags": [
-                    "event"
+                    "eventClass"
                 ],
                 "description": "Serves a list of event classes",
                 "parameters": [
@@ -1156,73 +1116,6 @@
                 }
             }
         },
-        "/file-import/network-location": {
-            "post": {
-                "tags": [
-                    "deviceFile"
-                ],
-                "description": "Imports a new or updated device file, like a device description file, a firmware file, a document or an image file",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Filename"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "$ref": "#/responses/OK"
-                    },
-                    "400": {
-                        "description": "Unsupported file type"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/file-import/client-system": {
-            "post": {
-                "tags": [
-                    "deviceFile"
-                ],
-                "description": "Uploads a new or updated device file, like a device description file, a firmware file, a document or an image file",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Filename"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "$ref": "#/responses/OK"
-                    },
-                    "400": {
-                        "description": "file is missing"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "415": {
-                        "description": "Unsupported media type"
-                    }
-                }
-            }
-        },
         "/floorplans": {
             "get": {
                 "tags": [
@@ -1292,7 +1185,7 @@
                 ]
             }
         },
-        "/floorplans/{ID}": {
+        "/floorplans/{id}": {
             "parameters": [
                 {
                     "$ref": "#/parameters/ID"
@@ -1355,7 +1248,7 @@
                 }
             }
         },
-        "/guidds/{ID}": {
+        "/guidds/{id}": {
             "get": {
                 "tags": [
                     "guidd"
@@ -1381,7 +1274,7 @@
                 "tags": [
                     "hardware"
                 ],
-                "description": "Serves a list with all devices with all attributes",
+                "description": "Hardware",
                 "parameters": [
                     {
                         "$ref": "#/parameters/Limit"
@@ -1408,154 +1301,6 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    }
-                }
-            },
-            "post": {
-                "tags": [
-                    "hardware"
-                ],
-                "description": "Imports devices files or archives",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Filename"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Device not found"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "hardware"
-                ],
-                "description": "Removes unregistered devices or sets them to preregistered.",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/hardware/{ID}": {
-            "get": {
-                "tags": [
-                    "hardware"
-                ],
-                "description": "Serves the specified device with all attributes",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Device not found"
-                    }
-                }
-            },
-            "put": {
-                "tags": [
-                    "hardware"
-                ],
-                "description": "Updates properties of a device or uploads firmware file and applies it to the device",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "consumes": [
-                    "application/json",
-                    "multipart/form-data"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Device not found"
-                    }
-                }
-            },
-            "del": {
-                "tags": [
-                    "hardware"
-                ],
-                "description": "Removes a specified device",
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Device not found"
                     }
                 }
             }
@@ -1570,7 +1315,7 @@
                 "tags": [
                     "mainDeviceClasses"
                 ],
-                "description": "Serves all MainDeviceClasses",
+                "description": "MainDeviceClasses",
                 "parameters": [
                     {
                         "$ref": "#/parameters/Limit"
@@ -1597,39 +1342,6 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "400": {
-                        "description": "Bad request"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/main-device-catalog": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "mainDeviceClasses"
-                ],
-                "description": "Serves the catalog part of MainDeviceClasses",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "400": {
-                        "description": "Bad request"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
                 }
             }
@@ -1672,9 +1384,6 @@
                     "200": {
                         "description": "OK",
                         "schema": null
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
                 }
             },
@@ -1700,74 +1409,47 @@
                     },
                     "400": {
                         "description": "Bad Request"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "415": {
-                        "description": "Unsupported media type"
                     }
                 },
                 "parameters": [
                     {
-                        "$ref": "#/parameters/DeviceClassID"
+                        "$ref": "#/parameters/MainDeviceActive"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAddAddress"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAllowCommands"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAllowReporting"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAllowEvent"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAllowISDUwr"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceAllowPDOut"
                     },
                     {
                         "$ref": "#/parameters/MainDeviceAssetID"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceCatalogName"
+                        "$ref": "#/parameters/DeviceClassID"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceConfigurationFile"
+                        "$ref": "#/parameters/MainDeviceCycleAwareness"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceConfigurationFileRequired"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicedefaultExtraInfos"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDescription"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDevID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceDescriptionAvailable"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceDescriptionIconFileName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceSubType"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceType"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDocumentNames"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceextraInfos"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceFloorPlanID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceGuiDD_ID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceIconFileName"
+                        "$ref": "#/parameters/MainDeviceIOName"
                     },
                     {
                         "$ref": "#/parameters/MainDeviceIPAddress"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceisSelfRegistering"
+                        "$ref": "#/parameters/MainDeviceInterfaceName"
                     },
                     {
                         "$ref": "#/parameters/MainDeviceLocationPos"
@@ -1779,87 +1461,30 @@
                         "$ref": "#/parameters/MainDeviceMAC"
                     },
                     {
+                        "$ref": "#/parameters/MainDeviceminSamplingRate"
+                    },
+                    {
                         "$ref": "#/parameters/MainDeviceMqttProtocol"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePDbitLengthIn"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePDbitLengthOut"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePictureFileName"
                     },
                     {
                         "$ref": "#/parameters/MainDevicePort"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceProductCategory"
+                        "$ref": "#/parameters/MainDeviceProtocol"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceProductID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterIsIntern"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterRevision"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSSL_TLS_Available"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicestandardPort"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicestartDevices"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceStopOnProblems"
+                        "$ref": "#/parameters/MainDeviceSSLTLS"
                     },
                     {
                         "$ref": "#/parameters/MainDeviceSubinterfaces"
                     },
                     {
-                        "$ref": "#/parameters/MainDeviceusesSSL_TLS"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceVendorID"
+                        "$ref": "#/parameters/MainDeviceConfigFileUploadBody"
                     }
                 ]
             }
         },
-        "/main-devices/scan/status": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "mainDevice"
-                ],
-                "description": "Returns whether the pre-reg scanner is currently running",
-                "produces": [
-                    "application/string"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/main-devices/{ID}": {
+        "/main-devices/{id}": {
             "get": {
                 "security": [
                     {
@@ -1881,178 +1506,6 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "MainDevice not found"
-                    }
-                }
-            },
-            "put": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "mainDevice"
-                ],
-                "description": "Updates properties of a specific mainDevice or uploads config files for mainDevice",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    },
-                    {
-                        "$ref": "#/parameters/DeviceClassID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceAssetID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceCatalogName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceConfigurationFile"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceConfigurationFileRequired"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicedefaultExtraInfos"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDescription"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDevID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceDescriptionAvailable"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceDescriptionIconFileName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceSubType"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDeviceType"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceDocumentNames"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceextraInfos"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceFloorPlanID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceGuiDD_ID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceIconFileName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceIPAddress"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceisSelfRegistering"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceLocationPos"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceLocationTag"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceMAC"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceMqttProtocol"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePDbitLengthIn"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePDbitLengthOut"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePictureFileName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicePort"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceProductCategory"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceProductID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterID"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterIsIntern"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterName"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSoftwareAdapterRevision"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSSL_TLS_Available"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicestandardPort"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDevicestartDevices"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceStopOnProblems"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceSubinterfaces"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceusesSSL_TLS"
-                    },
-                    {
-                        "$ref": "#/parameters/MainDeviceVendorID"
-                    },
-                    {
-                        "$ref": "#/parameters/Filename"
-                    }
-                ],
-                "consumes": [
-                    "application/json",
-                    "multipart/form-data"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "400": {
-                        "description": "no files sent"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "MainDevice not found"
-                    },
-                    "415": {
-                        "description": "Unsupported media type"
                     }
                 }
             },
@@ -2078,8 +1531,45 @@
                     "200": {
                         "description": "OK"
                     },
-                    "401": {
-                        "description": "Authorization failed"
+                    "404": {
+                        "description": "MainDevice not found"
+                    }
+                }
+            }
+        },
+        "/main-devices/{id}#data": {
+            "put": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/ID"
+                    },
+                    {
+                        "$ref": "#/parameters/MainDeviceBody",
+                        "schema": [
+                            {
+                                "$ref": "#/definitions/putMainDevice"
+                            }
+                        ]
+                    }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "Update mainDevice settings",
+                "produces": [
+                    "application/json"
+                ],
+                "consumes": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK"
                     },
                     "404": {
                         "description": "MainDevice not found"
@@ -2087,325 +1577,37 @@
                 }
             }
         },
-        "/privileges": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "privilege"
-                ],
-                "description": "Serves a list of Privilege",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Limit"
-                    },
-                    {
-                        "$ref": "#/parameters/Offset"
-                    },
-                    {
-                        "$ref": "#/parameters/Properties"
-                    },
-                    {
-                        "$ref": "#/parameters/Filter"
-                    },
-                    {
-                        "$ref": "#/parameters/Group"
-                    },
-                    {
-                        "$ref": "#/parameters/Count"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/privileges/{ID}": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "privilege"
-                ],
-                "description": "Get Privilege specific information",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/reporting": {
-            "get": {
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Devices"
-                    },
-                    {
-                        "$ref": "#/parameters/ReportingRangeStart"
-                    },
-                    {
-                        "$ref": "#/parameters/ReportingRangeEnd"
-                    },
-                    {
-                        "$ref": "#/parameters/ReportingProperties"
-                    },
-                    {
-                        "$ref": "#/parameters/ReportingSamples"
-                    },
-                    {
-                        "$ref": "#/parameters/ReportingSource"
-                    }
-                ],
-                "tags": [
-                    "reporting"
-                ],
-                "description": "Serves all reporting data",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "400": {
-                        "description": "Missing parameter `devices`"
-                    }
-                }
-            }
-        },
-        "/roles": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "role"
-                ],
-                "description": "Serves a list of Role",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            },
-            "post": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "role"
-                ],
-                "description": "Adds a new Role",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/RoleName"
-                    },
-                    {
-                        "$ref": "#/parameters/RoleSystem"
-                    },
-                    {
-                        "$ref": "#/parameters/Description"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/roles/{ID}": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "role"
-                ],
-                "description": "Get Role specific information",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    }
-                }
-            },
+        "/main-devices/{id}#configfile": {
             "put": {
                 "security": [
                     {
                         "basicAuth": []
                     }
                 ],
-                "tags": [
-                    "role"
-                ],
-                "description": "Update Role",
                 "parameters": [
                     {
                         "$ref": "#/parameters/ID"
                     },
                     {
-                        "$ref": "#/parameters/RoleName"
-                    },
-                    {
-                        "$ref": "#/parameters/RoleSystem"
-                    },
-                    {
-                        "$ref": "#/parameters/Description"
+                        "$ref": "#/parameters/MainDeviceConfigFileUploadBody"
                     }
+                ],
+                "tags": [
+                    "mainDevice"
+                ],
+                "description": "File upload for io mainDevice configuration file",
+                "produces": [
+                    "application/json"
                 ],
                 "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
+                    "multipart/form-data"
                 ],
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     },
                     "404": {
-                        "description": "Not found"
-                    }
-                }
-            },
-            "delete": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "tags": [
-                    "role"
-                ],
-                "description": "roles/:ID",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "Not found"
-                    }
-                }
-            }
-        },
-        "/application-data/{AppLabel}": {
-            "get": {
-                "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "description": "Serves application data by Label",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/AppLabel"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/node": {
-            "get": {
-                "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "description": "Returns the Server identification information",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
+                        "description": "MainDevice not found"
                     }
                 }
             }
@@ -2413,7 +1615,7 @@
         "/server": {
             "get": {
                 "tags": [
-                    "server_"
+                    "server"
                 ],
                 "description": "Returns the Server configuration",
                 "produces": [
@@ -2423,11 +1625,16 @@
                     "200": {
                         "description": "OK"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             },
             "put": {
                 "tags": [
-                    "server_"
+                    "server"
                 ],
                 "description": "Updates the server configufration",
                 "produces": [
@@ -2473,12 +1680,7 @@
                     }
                 ],
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "ping an OT or IT device connected to the sicon box",
                 "produces": [
@@ -2487,22 +1689,19 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/status": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "get overall server status",
                 "produces": [
@@ -2511,164 +1710,115 @@
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/reboot": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "reboot server",
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/shutdown": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "shutdown server",
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
-            }
-        },
-        "/server/connectivity/finder": {
-            "get": {
-                "tags": [
-                    "server_"
-                ],
+                },
                 "security": [
                     {
                         "basicAuth": []
                     }
-                ],
-                "description": "checks if sdd and iodd finder can be reached",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/server/connectivity": {
-            "get": {
-                "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "description": "checks if iodd finder, app store and registry can be reached",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
+                ]
             }
         },
         "/server/service-status": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "Status of the LEDs and LAN services",
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/scan": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "Scan for IPs on the interfaces of the hardware",
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/information": {
             "get": {
                 "tags": [
-                    "server_"
-                ],
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
+                    "server"
                 ],
                 "description": "Get hardware data - CPU, memory, etc",
                 "responses": {
                     "200": {
                         "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
                     }
-                }
+                },
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ]
             }
         },
         "/server/timezones": {
             "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
                 "tags": [
-                    "server_"
+                    "server",
+                    "timezone"
                 ],
                 "description": "Serves a list of timezones",
                 "produces": [
@@ -2683,10 +1833,16 @@
         },
         "/server/timezone": {
             "get": {
-                "tags": [
-                    "server_"
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
                 ],
-                "description": "Serves the installation`s timezone",
+                "tags": [
+                    "server",
+                    "timezone"
+                ],
+                "description": "Serves the box` timezone",
                 "produces": [
                     "application/json"
                 ],
@@ -2694,224 +1850,22 @@
                     "200": {
                         "description": "OK"
                     }
-                }
-            },
-            "put": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "server_"
-                ],
-                "description": "Sets the installation`s timezones",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Location"
-                    }
-                ],
-                "responses": {
+                },
+                "put": {
                     "200": {
                         "description": "OK"
                     },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/server/static-data": {
-            "get": {
-                "tags": [
-                    "server_"
-                ],
-                "description": "Serves the installation`s static data",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            }
-        },
-        "/uiconfig": {
-            "get": {
-                "tags": [
-                    "uiconfig"
-                ],
-                "description": "Serves the user interface configuration",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    }
-                }
-            },
-            "put": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "uiconfig"
-                ],
-                "description": "Updates user interface configuration",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ConfigurationFile"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/users": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "user"
-                ],
-                "description": "Serves a list of User",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            },
-            "post": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "user"
-                ],
-                "description": "Adds a new user",
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    }
-                }
-            }
-        },
-        "/users/{ID}": {
-            "get": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "user"
-                ],
-                "description": "Get User specific information",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "User not found"
-                    }
-                }
-            },
-            "put": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "tags": [
-                    "user"
-                ],
-                "description": "Update User",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "consumes": [
-                    "application/json"
-                ],
-                "produces": [
-                    "application/json"
-                ],
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "User not found"
-                    }
-                }
-            },
-            "delete": {
-                "security": [
-                    {
-                        "basicAuth": []
-                    }
-                ],
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/ID"
-                    }
-                ],
-                "tags": [
-                    "user"
-                ],
-                "description": "Deletes user",
-                "responses": {
-                    "200": {
-                        "description": "OK"
-                    },
-                    "401": {
-                        "description": "Authorization failed"
-                    },
-                    "404": {
-                        "description": "User not found"
-                    }
+                    "security": [
+                        {
+                            "basicAuth": []
+                        }
+                    ],
+                    "tags": [
+                        "server",
+                        "timezone"
+                    ],
+                    "description": "Sets the box` timezones",
+                    "responses": null
                 }
             }
         },
@@ -2948,18 +1902,23 @@
                 }
             }
         },
-        "/version/{Vendor}/{App}": {
+        "/version": {
             "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
                 "tags": [
                     "version"
                 ],
                 "description": "Get a changelog of all versions (git tags)",
                 "parameters": [
                     {
-                        "$ref": "#/parameters/Vendor"
+                        "$ref": "#/parameters/VersionStart"
                     },
                     {
-                        "$ref": "#/parameters/App"
+                        "$ref": "#/parameters/VersionEnd"
                     }
                 ],
                 "produces": [
@@ -2972,20 +1931,17 @@
                 }
             }
         },
-        "/version/{Vendor}/{App}/installed": {
+        "/version/installed": {
             "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
                 "tags": [
                     "version"
                 ],
                 "description": "Get currently installed version",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Vendor"
-                    },
-                    {
-                        "$ref": "#/parameters/App"
-                    }
-                ],
                 "produces": [
                     "application/json"
                 ],
@@ -2996,20 +1952,17 @@
                 }
             }
         },
-        "/version/{Vendor}/{App}/latest": {
+        "/version/latest": {
             "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
                 "tags": [
                     "version"
                 ],
                 "description": "Get latest (on build server) installed version",
-                "parameters": [
-                    {
-                        "$ref": "#/parameters/Vendor"
-                    },
-                    {
-                        "$ref": "#/parameters/App"
-                    }
-                ],
                 "produces": [
                     "application/json"
                 ],
@@ -3020,18 +1973,20 @@
                 }
             }
         },
-        "/version/{Vendor}/{App}/channels": {
+        "/version/{tag}": {
             "get": {
+                "security": [
+                    {
+                        "basicAuth": []
+                    }
+                ],
                 "tags": [
                     "version"
                 ],
                 "description": "Get a specific version from upstream build server",
                 "parameters": [
                     {
-                        "$ref": "#/parameters/Vendor"
-                    },
-                    {
-                        "$ref": "#/parameters/App"
+                        "$ref": "#/parameters/VersionID"
                     }
                 ],
                 "produces": [
@@ -4006,12 +2961,7 @@
             "description": "An app is a container pulled from the service.sicon.eco cloud registry"
         },
         {
-            "name": "certificate",
-            "description": "the certificate is used to establish an end to end encrypted connection between the client and the backend"
-        },
-        {
-            "name": "deviceClass",
-            "description": "A deviceClass contains all device properties that are instance independent"
+            "name": "deviceClass"
         },
         {
             "name": "device",
@@ -4020,10 +2970,6 @@
         {
             "name": "event",
             "description": "Events are spawned by devices and have code, timestamp and severity"
-        },
-        {
-            "name": "deviceFile",
-            "description": "a deviceFile specifies properties of a device that facilitates automated data processing"
         },
         {
             "name": "floorplan",
@@ -4046,32 +2992,8 @@
             "description": "Main devices allow to access mounted devices"
         },
         {
-            "name": "privilege",
-            "description": "Privileges a singular permissions of access"
-        },
-        {
-            "name": "reporting",
-            "description": "Reporting data"
-        },
-        {
-            "name": "role",
-            "description": "A Role is entitled to a list of privileges"
-        },
-        {
-            "name": "server_",
+            "name": "server",
             "description": "Server"
-        },
-        {
-            "name": "uiconfig",
-            "description": "User Interface configuration"
-        },
-        {
-            "name": "user",
-            "description": "A user account can have multiple roles and inherit their privileges."
-        },
-        {
-            "name": "vendors",
-            "description": "Vendor information"
         },
         {
             "name": "version",
